@@ -13,5 +13,8 @@ public class Calculator {
     // Nikolai Psekha
 
     // Natallia Taranko
+    public static short add(short number1, short number2) {
+        return number1 + number2;
+    }
 
 }
