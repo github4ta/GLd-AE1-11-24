@@ -8,6 +8,10 @@ public class Calculator {
         return a + b;
     }
 
+    public static float multiply (float a, float b) {
+        return a * b;
+    }
+
     public static byte add(byte a, byte b) {
         byte result = (byte) (a + b);
         return result;
