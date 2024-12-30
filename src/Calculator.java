@@ -4,6 +4,10 @@ public class Calculator {
         return a + b;
     }
 
+    public static long multiply(long a, long b) {
+        return a * b;
+    }
+
     public static float add(float a, float b) {
         return a + b;
     }
