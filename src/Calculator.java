@@ -12,13 +12,17 @@ public class Calculator {
         return a + b;
     }
 
-    public static float multiply (float a, float b) {
+    public static float multiply(float a, float b) {
         return a * b;
     }
 
     public static byte add(byte a, byte b) {
         byte result = (byte) (a + b);
         return result;
+    }
+
+    public static byte multiply(byte a, byte b) {
+        return (byte) (a * b);
     }
 
     public static short add(short number1, short number2) {
@@ -32,7 +36,5 @@ public class Calculator {
     public static double add(double a, double b) {
         return a + b;
     }
-    public static byte multiply (byte a,byte b){
-        return (byte) (a*b);
-    }
+
 }
