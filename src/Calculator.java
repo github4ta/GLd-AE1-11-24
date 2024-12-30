@@ -28,7 +28,7 @@ public class Calculator {
         return a + b;
     }
 
-    public static double sum(double a, double b) {
+    public static double sumDouble(double a, double b) {
         return a + b;
     }
 }
