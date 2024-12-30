@@ -2,5 +2,6 @@ public class Calculator {
 
     // Sergei Tsarik
 
-    // Nikolai Psekha
+   //   Nikolai Psekha
+    // Natallia Taranko
 }
