@@ -5,3 +5,4 @@
 - Vladimir Bordiyan
 - Aliaksandr Linnik
 - Nikolai Psekha
+- Aleksandra Primako
