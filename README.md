@@ -4,3 +4,4 @@
 - Viktoria Tsyhler
 - Vladimir Bordiyan
 - Aliaksandr Linnik
+- Nikolai Psekha
