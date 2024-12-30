@@ -14,9 +14,11 @@ public class Calculator {
 
     // Natallia Taranko
 
-    public static int addInt (int a,int b){
-        return a+b;
+    public static int addInt(int a, int b) {
+        return a + b;
     }
-    public static double sum (double a,double b){
-        return a+b;
+
+    public static double sum(double a, double b) {
+        return a + b;
+    }
 }
