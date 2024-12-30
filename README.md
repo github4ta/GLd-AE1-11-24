@@ -6,3 +6,4 @@
 - Aliaksandr Linnik
 - Nikolai Psekha
 - Aleksandra Primako
+- Natallia Taranko
