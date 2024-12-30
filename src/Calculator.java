@@ -14,4 +14,7 @@ public class Calculator {
 
     // Natallia Taranko
 
+    public static int addInt (int a,int b){
+        return a+b;
+    }
 }
