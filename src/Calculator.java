@@ -39,4 +39,7 @@ public class Calculator {
     public static short multiply(short a, short b) {
         return (short) (a * b);
     }
+    public static int multiply(int a, int b){
+        return a*b;
+    }
 }
