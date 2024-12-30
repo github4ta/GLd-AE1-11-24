@@ -12,7 +12,7 @@ public class Calculator {
         return a + b;
     }
 
-    public static float multiply (float a, float b) {
+    public static float multiply(float a, float b) {
         return a * b;
     }
 
@@ -32,14 +32,16 @@ public class Calculator {
     public static double add(double a, double b) {
         return a + b;
     }
-    public static double multiply(double a, double b){
+
+    public static double multiply(double a, double b) {
         return a * b;
     }
 
     public static short multiply(short a, short b) {
         return (short) (a * b);
     }
-    public static int multiply(int a, int b){
-        return a*b;
+
+    public static int multiply(int a, int b) {
+        return a * b;
     }
 }
