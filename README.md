@@ -2,3 +2,4 @@
 
 - Sergei Tsarik
 - Viktoria Tsyhler
+- Vladimir Bordiyan
