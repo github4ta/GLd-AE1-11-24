@@ -3,3 +3,4 @@
 - Sergei Tsarik
 - Viktoria Tsyhler
 - Vladimir Bordiyan
+- Aliaksandr Linnik
