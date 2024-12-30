@@ -21,10 +21,6 @@ public class Calculator {
         return result;
     }
 
-    public static byte multiply(byte a, byte b) {
-        return (byte) (a * b);
-    }
-
     public static short add(short number1, short number2) {
         return (short) (number1 + number2);
     }
@@ -37,4 +33,15 @@ public class Calculator {
         return a + b;
     }
 
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+
+    public static short multiply(short a, short b) {
+        return (short) (a * b);
+    }
+
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
 }
