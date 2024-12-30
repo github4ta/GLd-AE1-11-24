@@ -5,30 +5,30 @@ public class Calculator {
     // Vladimir Bordiyan
 
     // Aleksandra Primako
-    public static long addLong(int a, int b) {
+    public static long add(long a, long b) {
         return a + b;
     }
     // Sergei Tsarik
 
     // Alexander Linnik
-    public static float AdditionFloat(float a, float b) {
+    public static float add(float a, float b) {
         return a + b;
     }
     // Nikolai Psekha
-     public static byte sum(byte a,byte b){
+     public static byte add(byte a,byte b){
          byte result = (byte) (a + b);
          return result;
      }
     // Natallia Taranko
     public static short add(short number1, short number2) {
-        return number1 + number2;
+        return (short) (number1 + number2);
     }
 
     public static int add(int a, int b) {
         return a + b;
     }
 
-    public static double sum(double a, double b) {
+    public static double add(double a, double b) {
         return a + b;
     }
 }
