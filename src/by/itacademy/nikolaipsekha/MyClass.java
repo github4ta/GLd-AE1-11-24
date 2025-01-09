@@ -6,8 +6,8 @@ public static String numbersOfChange( int a, int b, int c){
         return " exellent ";
     } else if (a > 0 && b > 0 && c < 0) {
         return " good ";
-
-
+    } else if (a > 0 && b < 0 && c < 0) {
+return " fine ";
     }
 }
 }
