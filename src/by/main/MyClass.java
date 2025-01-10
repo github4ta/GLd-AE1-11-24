@@ -1,10 +1,10 @@
-package by.itacademy.nikolaipsekha;
+package by.main;
 
 public class MyClass {
     public static String numbersOfChange(int a, int b, int c) {
         if (a > 0 & b > 0 & c > 0) {
             return String.format("a = %s, b=%s, c=%s excellent", a, b, c);
-        } else if (a > 0 && b > 0 && c < 0) {
+        } else if (a > 0 && b > 0 && c < 0 || a > 0 && b < 0 && c > 0 || a < 0 && b > 0 && c > 0 ) {
             return String.format("a = %s, b=%s, c=%s good", a, b, c);
         } else if (a > 0 && b < 0 && c < 0) {
             return String.format("a = %s, b=%s, c=%s fine", a, b, c);
