@@ -1,6 +1,6 @@
-package by.tiacademy.AlexLinnik.TestDataChecker;
+package by.tiacademy.alex.linnik.test.data.checker;
 
-import by.itacademy.AlexLinnik.DataChecker.DataChecker;
+import by.itacademy.AlexLinnik.dataChecker.DataChecker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +8,6 @@ public class TestData {
     @Test
     public void addTest() {
         Assertions.assertEquals("Праздничный день", DataChecker.printHolidayDay(1, 1));
-
     }
 
     @Test
