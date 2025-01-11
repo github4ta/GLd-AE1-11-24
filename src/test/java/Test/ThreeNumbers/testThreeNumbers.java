@@ -7,23 +7,26 @@ import org.junit.jupiter.api.Test;
 
 public class testThreeNumbers {
     @Test
-    @DisplayName("3/3")
-    public void addTest1(){
-        Assertions.assertEquals("excellent", Numbers.numbers(1,2,6));
+    @DisplayName("We check for the presence of three positive numbers.")
+    public void testNumbers1() {
+        Assertions.assertEquals("excellent", Numbers.numbers(1, 2, 6));
     }
+
     @Test
-    @DisplayName("2/3")
-    public void addTest2(){
-        Assertions.assertEquals("good",Numbers.numbers(-4,8,9));
+    @DisplayName("We check for the presence of two positive numbers.")
+    public void testNumbers2() {
+        Assertions.assertEquals("good", Numbers.numbers(-4, 8, 9));
     }
+
     @Test
-    @DisplayName("1/3")
-    public void addTest3(){
-        Assertions.assertEquals("fine",Numbers.numbers(-9,-7,3));
+    @DisplayName("We check for the presence of one positive digit.")
+    public void testNumbers3() {
+        Assertions.assertEquals("fine", Numbers.numbers(-9, -7, 3));
     }
+
     @Test
-    @DisplayName("Все 0")
-    public void addTest4(){
-        Assertions.assertEquals("мы так не договаривались",Numbers.numbers(0,0,0));
+    @DisplayName("We check for the presence of zeros.")
+    public void testNumbers4() {
+        Assertions.assertEquals("мы так не договаривались", Numbers.numbers(0, 0, 0));
     }
 }
