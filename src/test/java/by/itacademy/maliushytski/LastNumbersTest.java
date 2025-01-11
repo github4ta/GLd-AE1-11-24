@@ -12,6 +12,24 @@ public class LastNumbersTest {
     @Test
     @Description("Test zero digit")
     public void checkZeroDigit() {
-        Assertions.assertEquals("0 - последняя цифра числа 0", LastNumber.sendLastNumber(0));
+        Assertions.assertEquals("irrelevant number", LastNumber.sendLastNumber(0));
+    }
+
+    @Test
+    @Description("Test irrelevant digit")
+    public void checkIrrelevantDigit() {
+        Assertions.assertEquals("irrelevant number", LastNumber.sendLastNumber(1));
+    }
+
+    @Test
+    @Description("Test negative digit")
+    public void checkNegativeDigit() {
+        Assertions.assertEquals("0 - последняя цифра числа -100", LastNumber.sendLastNumber(-100));
+    }
+
+    @Test
+    @Description("Test large digit")
+    public void checkLargeDigit() {
+        Assertions.assertEquals("7 - последняя цифра числа 2147483647", LastNumber.sendLastNumber(Integer.MAX_VALUE));
     }
 }
