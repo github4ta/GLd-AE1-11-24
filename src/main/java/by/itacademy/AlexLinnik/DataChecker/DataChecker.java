@@ -1,4 +1,4 @@
-package by.itacademy.AlexLinnik;
+package by.itacademy.AlexLinnik.DataChecker;
 
 public class DataChecker {
     public static String date(int a, int b) {
