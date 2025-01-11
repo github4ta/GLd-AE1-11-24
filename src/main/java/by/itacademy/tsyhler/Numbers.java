@@ -13,10 +13,6 @@ public class Numbers {
     }
 
 
-    //    Многозначное число – число, у которого 2 и более цифр, например, 23, 124, 2345678.
-//    Написать код, который будет выводить в консоль сообщение:
-//            “5 - последняя цифра числа ХХХ5”.
-//    Оформить решение в виде метода в классе (названия на ваше усмотрение)
     public static String lastDigitOfNumber(long number) {
         int lastDigit = (int) (number % 10);
         if (lastDigit < 0) lastDigit = -lastDigit;
