@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class DataChecker {
     public static final String INVALID_DATE_MSG = "такой даты не существует";
-    public static final String ЭТО_ПРАЗДНИЧНЫЙ_ДЕНЬ = "Это праздничный день";
+    public static final String IT_IS_A_HOLIDAY = "Это праздничный день";
     static Map<Integer, Set<Integer>> hollyDays = new HashMap<>();
     static Map<Integer, String> months = new HashMap<>();
 
@@ -53,7 +53,7 @@ public class DataChecker {
     public static String printHolidayDay(int month, int day) {
         Set<Integer> days = hollyDays.get(month);
         if (days != null && days.contains(day)) {
-            return ЭТО_ПРАЗДНИЧНЫЙ_ДЕНЬ;
+            return IT_IS_A_HOLIDAY;
         } else {
             return "Обычный день";
         }

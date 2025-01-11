@@ -2,11 +2,10 @@ package by.tiacademy.alex.linnik.test.data.checker;
 
 import by.itacademy.AlexLinnik.dataChecker.DataChecker;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static by.itacademy.AlexLinnik.dataChecker.DataChecker.INVALID_DATE_MSG;
-import static by.itacademy.AlexLinnik.dataChecker.DataChecker.ЭТО_ПРАЗДНИЧНЫЙ_ДЕНЬ;
+import static by.itacademy.AlexLinnik.dataChecker.DataChecker.IT_IS_A_HOLIDAY;
 
 public class TestData {
     @Test
@@ -31,6 +30,6 @@ public class TestData {
 
     @Test
     public void addTest4() {
-        Assertions.assertEquals(ЭТО_ПРАЗДНИЧНЫЙ_ДЕНЬ, DataChecker.checkDate(1, 1));
+        Assertions.assertEquals(IT_IS_A_HOLIDAY, DataChecker.checkDate(1, 1));
     }
 }
