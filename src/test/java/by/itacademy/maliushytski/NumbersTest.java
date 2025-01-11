@@ -34,10 +34,14 @@ public class NumbersTest {
     }
 
     @Test
-    @Description("Test defineZeros method with large values")
-    public void checkLargeValues() {
+    @Description("Test defineZeros method with large max values")
+    public void checkLargeMaxValues() {
         Assertions.assertEquals("excellent", Numbers.defineZeros(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE));
+    }
+
+    @Test
+    @Description("Test defineZeros method with large min values")
+    public void checkLargeMinValues() {
         Assertions.assertEquals("bad", Numbers.defineZeros(Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE));
     }
 }
-
