@@ -3,6 +3,7 @@ package by.itacademy.tsyhler;
 import java.util.Arrays;
 
 public class Numbers {
+
     public static String positiveNumbers(int a, int b, int c) {
         int[] numbers = {a, b, c};
         int positiveCount = (int) Arrays.stream(numbers).filter(s -> s > 0).count();
@@ -24,9 +25,16 @@ public class Numbers {
         return String.format("%s - последняя цифра числа %s", digitsOfNumber[digitsOfNumber.length - 1], number);
     }
 
+    public static int sumOfNumbers(int number) {
+        int firstPartOfNumber = number / 100;
+        int secondPartOfNumber = (number < 0) ? -number % 100 : number % 100;
+        return firstPartOfNumber + secondPartOfNumber;
+    }
+
     public static void main(String[] args) {
         System.out.println(positiveNumbers(-1, -1, -1));
         System.out.println(lastDigitOfNumber("56543334"));
+        System.out.println(sumOfNumbers(-1234));
 
     }
 }
