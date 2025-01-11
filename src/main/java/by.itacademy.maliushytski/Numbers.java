@@ -8,7 +8,6 @@ public class Numbers {
             case 2 -> "good";
             case 3 -> "excellent";
             default -> "bad";
-
         };
     }
 }
