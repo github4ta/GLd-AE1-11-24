@@ -16,4 +16,30 @@ public class TestNumbers {
     public void testPositiveNumbers(int a, int b, int c, String expectedResult) {
         Assertions.assertEquals(expectedResult, Numbers.positiveNumbers(a, b, c));
     }
+
+    @ParameterizedTest
+    @CsvSource({
+            "10, '0 - последняя цифра числа '",
+            "18738785489, '9 - последняя цифра числа '",
+            "3333333333, '3 - последняя цифра числа '",
+            "-1837287424, '4 - последняя цифра числа '",
+            "0, '0 - последняя цифра числа '",
+            "-35, '5 - последняя цифра числа '"
+    })
+    public void testPositiveNumbers(long number, String expectedResult) {
+        Assertions.assertEquals(expectedResult + number, Numbers.lastDigitOfNumber(number));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "10, '0 - последняя цифра числа '",
+            "18738785489, '9 - последняя цифра числа '",
+            "333333333333333333333, '3 - последняя цифра числа '",
+            "-1837287424, '4 - последняя цифра числа '",
+            "0, '0 - последняя цифра числа '",
+            "-35, '5 - последняя цифра числа '"
+    })
+    public void testPositiveNumbers(String number, String expectedResult) {
+        Assertions.assertEquals(expectedResult + number, Numbers.lastDigitOfNumber(number));
+    }
 }
