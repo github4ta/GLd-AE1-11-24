@@ -2,32 +2,35 @@ package by.tiacademy.alex.linnik.test.data.checker;
 
 import by.itacademy.AlexLinnik.dataChecker.DataChecker;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import static by.itacademy.AlexLinnik.dataChecker.DataChecker.INVALID_DATE_MSG;
+import static by.itacademy.AlexLinnik.dataChecker.DataChecker.ЭТО_ПРАЗДНИЧНЫЙ_ДЕНЬ;
 
 public class TestData {
     @Test
     public void addTest() {
-        Assertions.assertEquals("Праздничный день", DataChecker.printHolidayDay(1, 1));
+        Assertions.assertEquals("Это праздничный день", DataChecker.printHolidayDay(1, 1));
     }
 
     @Test
     public void addTest1() {
-        Assertions.assertEquals("февраль", DataChecker.getMonthName(2));
+        Assertions.assertEquals("Февраль", DataChecker.getMonthName(2));
     }
 
     @Test
     public void addTest2() {
-        Assertions.assertEquals("такой даты не существует", DataChecker.date(6, 32));
+        Assertions.assertEquals(INVALID_DATE_MSG, DataChecker.checkDate(6, 32));
     }
 
     @Test
     public void addTest3() {
-        Assertions.assertEquals("актуальная дата", DataChecker.date(2, 3));
+        Assertions.assertEquals("Обычный день", DataChecker.checkDate(2, 3));
     }
 
     @Test
     public void addTest4() {
-        Assertions.assertEquals("Праздничный день", DataChecker.date(1, 1));
+        Assertions.assertEquals(ЭТО_ПРАЗДНИЧНЫЙ_ДЕНЬ, DataChecker.checkDate(1, 1));
     }
-
 }
