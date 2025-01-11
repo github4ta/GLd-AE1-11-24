@@ -21,7 +21,7 @@ public class TestNumbers {
     @CsvSource({
             "10, '0 - последняя цифра числа '",
             "18738785489, '9 - последняя цифра числа '",
-            "3333333333, '3 - последняя цифра числа '",
+            "3333333333333, '3 - последняя цифра числа '",
             "-1837287424, '4 - последняя цифра числа '",
             "0, '0 - последняя цифра числа '",
             "-35, '5 - последняя цифра числа '"
@@ -41,5 +41,17 @@ public class TestNumbers {
     })
     public void testPositiveNumbers(String number, String expectedResult) {
         Assertions.assertEquals(expectedResult + number, Numbers.lastDigitOfNumber(number));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "4444, 88",
+            "4900, 49",
+            "-3456, 22",
+            "-2001, -19",
+            "1000, 10 "
+    })
+    public void testSumOfNumbers(int number, int expectedResult) {
+        Assertions.assertEquals(expectedResult, Numbers.sumOfNumbers(number));
     }
 }
