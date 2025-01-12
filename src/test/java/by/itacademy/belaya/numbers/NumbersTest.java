@@ -32,5 +32,12 @@ public class NumbersTest {
                 Numbers.classify(0, 0, -10));
     }
 
+    @Test
+    @DisplayName("All numbers are zero")
+    public void test5() {
+        Assertions.assertEquals("bad",
+                Numbers.classify(0, 0, 0));
+    }
+
 }
 
