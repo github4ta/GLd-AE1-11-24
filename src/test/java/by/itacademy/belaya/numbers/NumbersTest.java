@@ -12,6 +12,12 @@ public class NumbersTest {
         Assertions.assertEquals("excellent",
                 Numbers.classify(1, Integer.MAX_VALUE, 20));
     }
+    @Test
+    @DisplayName("Two numbers are positive")
+    public void test2() {
+        Assertions.assertEquals("good",
+                Numbers.classify(0, Integer.MAX_VALUE, 20));
+    }
 
 }
 
