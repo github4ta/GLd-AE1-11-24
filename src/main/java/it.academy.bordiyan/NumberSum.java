@@ -1,6 +1,6 @@
 package it.academy.bordiyan;
 
-public class NumberSum {
+public class NumberSumParts {
     public static int numberSum() {
         int number = 2314;
         String numStr = String.valueOf(number);
@@ -13,9 +13,10 @@ public class NumberSum {
 }
 
 public static void main(String[] args) {
-    NumberSum numberSum = new NumberSum();
-    System.out.println(numberSum.r.);
+    NumberSumParts numberSumParts = new NumberSumParts();
+    System.out.println(numberSum.sumOfParts(2314)); // Выводит 37
+    System.out.println(numberSum.sumOfParts(1234)); // Выводит 37
+}
+}
 
-    //как проверить правильность кода??)
 
-}}
