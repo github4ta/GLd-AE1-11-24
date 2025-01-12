@@ -13,6 +13,6 @@ public class PositiveNumber {
         } if (a < 0 & b < 0 & c < 0) {
             return String("Bad - ни одного числа больше 0");
         }
-       // return String("Вы вели нули");
+       return String("Вы вели нули");
     }
 }
