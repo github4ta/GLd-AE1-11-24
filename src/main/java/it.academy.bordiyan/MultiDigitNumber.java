@@ -7,6 +7,6 @@ public class MultiDigitNumber {
         }
 
         int digitNumber = number % 10;
-        return
+        return digitNumber+ " - последняя цифра числа " + number;
     }
 }
