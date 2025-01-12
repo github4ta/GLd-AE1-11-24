@@ -14,7 +14,7 @@ public class PositiveNumber {
         if (a < 0 & b < 0 & c < 0) {
             return "Bad - ни одного числа больше 0";
         } else {
-            return "Вы вели все нули";
+            return "Вы ввели все нули";
         }
     }
 }
