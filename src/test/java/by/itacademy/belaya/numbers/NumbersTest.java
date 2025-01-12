@@ -39,5 +39,11 @@ public class NumbersTest {
                 Numbers.classify(0, 0, 0));
     }
 
+    @Test
+    @DisplayName("All numbers are negative")
+    public void test6() {
+        Assertions.assertEquals("bad",
+                Numbers.classify(-1, -2, Integer.MIN_VALUE));
+    }
 }
 
