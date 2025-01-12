@@ -6,13 +6,15 @@ public class PositiveNumber {
             return "excellent - все три числа больше 0";
         }
         if ((a > 0 & b > 0 & c < 0) || (a > 0 & b < 0 & c > 0) || (a < 0 & b > 0 & c > 0)) {
-            return String.format("good - два числа больше 0");
+            return "good - два числа больше 0";
         }
         if ((a > 0 & b < 0 & c < 0) || (a < 0 & b > 0 & c < 0) || (a < 0 & b < 0 & c > 0)) {
-            return String("fine - одно числа больше 0");
-        } if (a < 0 & b < 0 & c < 0) {
-            return String("Bad - ни одного числа больше 0");
+            return "fine - одно числа больше 0";
         }
-       return String("Вы вели нули");
+        if (a < 0 & b < 0 & c < 0) {
+            return "Bad - ни одного числа больше 0";
+        }else {
+            return "Вы вели нули";
+        }
     }
 }
