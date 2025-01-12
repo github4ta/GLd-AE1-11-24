@@ -10,6 +10,7 @@ public class NumberSum {
     }
 }
 
+// Для проверки, чисто для себя.
 class Main {
     public static void main(String[] args) {
         NumberSum numberSum = new NumberSum();
