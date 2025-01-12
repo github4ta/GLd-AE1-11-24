@@ -9,6 +9,6 @@ public class TimeFormatTest {
 
     @Test
     public void testTime1() {
-        Assertions.assertEquals("180 часов 15 минут 58 секунд", TimeFormat.getTime2(648958));
+        Assertions.assertEquals("180 часов 15 минут 58 секунд", TimeFormat.getTime(648958));
     }
 }
