@@ -7,9 +7,9 @@ public class ChangeOfNumber {
         if (a > 0 && b > 0 && c < 0 || a > 0 && b < 0 && c > 0 || a < 0 && b > 0 && c > 0) {
             return "good";
         } else if (a > 0 && b < 0 && c < 0 || a < 0 && b > 0 && c < 0 || a < 0 && b < 0 && c > 0) {
-            return String.format("a=%s, b=%s, c=%s fine", a, b, c);
+            return "fine";
         } else if (a < 0 & b < 0 & c < 0) {
-            return String.format("a=%s, b=%s, c=%s bad", a, b, c);
+            return "bad";
         } else if (a==0 & b==0 & c==0) {
             return "not found numbers";
         }
