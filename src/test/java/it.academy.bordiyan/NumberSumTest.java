@@ -11,7 +11,7 @@ public class NumberSumTest {
 
     @Test
     public void numberSumTest2() {
-        Assertions.assertEquals(37, NumberSum.numberSumParts(1423));
+        Assertions.assertEquals(39, NumberSum.numberSumParts(1623));
     }
 }
 
