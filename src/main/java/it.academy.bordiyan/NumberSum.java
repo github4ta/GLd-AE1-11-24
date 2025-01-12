@@ -8,7 +8,7 @@ public class NumberSum {
         int ab = Integer.parseInt(numStr.substring(0, 2));
         int cd = Integer.parseInt(numStr.substring(2));
 
-        return  ab + cd;
+        return ab + cd;
     }
 }
 
@@ -16,6 +16,7 @@ class Main {
     public static void main(String[] args) {
         NumberSum numberSum = new NumberSum();
         System.out.println(NumberSum.numberSumParts(2314));
+        System.out.println(NumberSum.numberSumParts(1423));
     }
 }
 
