@@ -25,5 +25,12 @@ public class NumbersTest {
                 Numbers.classify(0, Integer.MAX_VALUE, -10));
     }
 
+    @Test
+    @DisplayName("Numbers are not positive")
+    public void test4() {
+        Assertions.assertEquals("bad",
+                Numbers.classify(0, 0, -10));
+    }
+
 }
 
