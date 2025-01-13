@@ -7,7 +7,6 @@ import java.util.Locale;
 import java.util.Set;
 
 public class DateChecker {
-
     private static final Set<MonthDay> CELEBRATION_DAYS = Set.of(
             MonthDay.of(1, 1),
             MonthDay.of(1, 2),
