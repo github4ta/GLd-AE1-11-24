@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 public class DateAndCalendarTest {
 
     @Test
-    @DisplayName("такой даты не существует")
+    @DisplayName("Такой даты не существует")
     public void dateCalendarTest(){
-        Assertions.assertEquals("AUGUST 31", DateAndCalendar.dateCalendar(8, 31));
+        Assertions.assertEquals("Такой даты не существует", DateAndCalendar.dateCalendar(13, 32));
     }
 }
