@@ -10,4 +10,7 @@ public class DigitSum {
         return number / 100;
     }
 
+    private static int getSecondPartOfNumber(int number) {
+        return Math.abs(number) % 100;
+    }
 }
