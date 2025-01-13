@@ -21,4 +21,11 @@ public class DigitSumTest {
         Assertions.assertEquals(20,
                 DigitSum.getSumOfTwoPartsOfNumber(1010));
     }
+
+    @Test
+    @DisplayName("Negative four-digit number")
+    public void test3() {
+        Assertions.assertEquals(0,
+                DigitSum.getSumOfTwoPartsOfNumber(-1010));
+    }
 }
