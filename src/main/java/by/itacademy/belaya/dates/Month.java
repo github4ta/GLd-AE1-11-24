@@ -19,10 +19,17 @@ public enum Month {
     private final int daysInMonth;
     private final String monthNameInDate;
 
+    private static final int[] DAYS_IN_MONTH = new int[12];
+
+    static {
+        for (Month month : Month.values()) {
+            DAYS_IN_MONTH[month.number - 1] = month.daysInMonth;
+        }
+    }
+
     Month(int number, int daysInMonth, String monthNameInDate) {
         this.number = number;
         this.daysInMonth = daysInMonth;
         this.monthNameInDate = monthNameInDate;
     }
 }
-
