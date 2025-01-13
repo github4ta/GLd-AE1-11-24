@@ -1,4 +1,7 @@
+
 package it.academy.bordiyan;
+
+import java.time.Month;
 
 public class DateAndCalendar {
     public static String dateCalendar(int month, int day) {
@@ -21,6 +24,6 @@ public class DateAndCalendar {
                 (month == 12 && day == 25)) {
             return "Праздничный день";
         }
+        return Month.of(month) + " " + day;
     }
 }
-
