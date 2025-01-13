@@ -39,4 +39,11 @@ public enum Month {
         }
         return Month.values()[month - 1].monthNameInDate;
     }
+
+    public static int getDaysInMonth(int month) {
+        if (month < 1 || month > 12) {
+            throw new IllegalArgumentException("Неверный номер месяца " + month);
+        }
+        return DAYS_IN_MONTH[month - 1];
+    }
 }
