@@ -28,4 +28,13 @@ public class MultiDigitNumberTest {
                 () -> MultiDigitNumber.getMessageAboutLastDigit(0));
         Assertions.assertEquals("Число должно быть многозначным", exception.getMessage());
     }
+
+    @Test
+    @DisplayName("Number is single-digit")
+    public void test4() {
+        IllegalArgumentException exception = Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> MultiDigitNumber.getMessageAboutLastDigit(5));
+        Assertions.assertEquals("Число должно быть многозначным", exception.getMessage());
+    }
 }
