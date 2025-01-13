@@ -2,61 +2,78 @@ package by.itacademy;
 
 import by.itcademy.PositiveNumbers;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class PositiveNumbersTest {
+    private final String good = "good";
+    private final String fine = "fine";
+    private final String excellent = "excellent";
+    private final String bad = "bad";
+
     @Test
-    public void threePositives() {
-        Assertions.assertEquals("excellent", PositiveNumbers.positiveNumbers(1, 2, 9));
+    @DisplayName("three positive numbers")
+    public void testThreePositives() {
+        Assertions.assertEquals(excellent, PositiveNumbers.positiveNumbers(1, 2, 9));
     }
 
     @Test
-    public void twoPositives1() {
-        Assertions.assertEquals("good", PositiveNumbers.positiveNumbers(1, -2, 9));
+    @DisplayName("two positive numbers")
+    public void testTwoPositives1() {
+        Assertions.assertEquals(good, PositiveNumbers.positiveNumbers(1, -2, 9));
     }
 
     @Test
-    public void twoPositives2() {
-        Assertions.assertEquals("good", PositiveNumbers.positiveNumbers(-1, 2, 9));
+    @DisplayName("two positive numbers ")
+    public void testTwoPositives2() {
+        Assertions.assertEquals(good, PositiveNumbers.positiveNumbers(-1, 2, 9));
     }
 
     @Test
-    public void twoPositives3() {
-        Assertions.assertEquals("good", PositiveNumbers.positiveNumbers(1, 2, -9));
+    @DisplayName("two positive numbers")
+    public void testTwoPositives3() {
+        Assertions.assertEquals(good, PositiveNumbers.positiveNumbers(1, 2, -9));
     }
 
     @Test
-    public void twoPositivesWithOneZero1() {
-        Assertions.assertEquals("good", PositiveNumbers.positiveNumbers(1, 2, 0));
+    @DisplayName("two positive numbers")
+    public void testTwoPositivesWithOneZero1() {
+        Assertions.assertEquals(good, PositiveNumbers.positiveNumbers(1, 2, 0));
     }
 
     @Test
-    public void onePositive1() {
-        Assertions.assertEquals("fine", PositiveNumbers.positiveNumbers(1, -2, -9));
+    @DisplayName("one positive number")
+    public void testOnePositive1() {
+        Assertions.assertEquals(fine, PositiveNumbers.positiveNumbers(1, -2, -9));
     }
 
     @Test
-    public void onePositive2() {
-        Assertions.assertEquals("fine", PositiveNumbers.positiveNumbers(-1, 2, -9));
+    @DisplayName("one positive number")
+    public void testOnePositive2() {
+        Assertions.assertEquals(fine, PositiveNumbers.positiveNumbers(-1, 2, -9));
     }
 
     @Test
-    public void onePositive3() {
-        Assertions.assertEquals("fine", PositiveNumbers.positiveNumbers(-1, -2, 9));
+    @DisplayName("one positive number")
+    public void testOnePositive3() {
+        Assertions.assertEquals(fine, PositiveNumbers.positiveNumbers(-1, -2, 9));
     }
 
     @Test
-    public void onePositiveWithTwoZeros() {
-        Assertions.assertEquals("fine", PositiveNumbers.positiveNumbers(0, 2, 0));
+    @DisplayName("one positive number")
+    public void testOnePositiveWithTwoZeros() {
+        Assertions.assertEquals(fine, PositiveNumbers.positiveNumbers(0, 2, 0));
     }
 
     @Test
-    public void noPositives() {
-        Assertions.assertEquals("bad", PositiveNumbers.positiveNumbers(-1, -2, -9));
+    @DisplayName("no positive numbers")
+    public void testNoPositives() {
+        Assertions.assertEquals(bad, PositiveNumbers.positiveNumbers(-1, -2, -9));
     }
 
     @Test
-    public void noPositivesThreeZeros() {
-        Assertions.assertEquals("bad", PositiveNumbers.positiveNumbers(0, 0, 0));
+    @DisplayName("three zeros")
+    public void testNoPositivesThreeZeros() {
+        Assertions.assertEquals(bad, PositiveNumbers.positiveNumbers(0, 0, 0));
     }
 }
