@@ -32,4 +32,11 @@ public enum Month {
         this.daysInMonth = daysInMonth;
         this.monthNameInDate = monthNameInDate;
     }
+
+    public static String getMonthNameInDate(int month) {
+        if (month < 1 || month > 12) {
+            throw new IllegalArgumentException("Неверный номер месяца " + month);
+        }
+        return Month.values()[month - 1].monthNameInDate;
+    }
 }
