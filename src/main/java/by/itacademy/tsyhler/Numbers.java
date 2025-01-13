@@ -7,12 +7,17 @@ public class Numbers {
     public static String positiveNumbers(int a, int b, int c) {
         int[] numbers = {a, b, c};
         int positiveCount = (int) Arrays.stream(numbers).filter(s -> s > 0).count();
-        if (positiveCount == 3) return "excellent";
-        if (positiveCount == 2) return "good";
-        if (positiveCount == 1) return "fine";
+        if (positiveCount == 3) {
+            return "excellent";
+        }
+        if (positiveCount == 2) {
+            return "good";
+        }
+        if (positiveCount == 1) {
+            return "fine";
+        }
         return "bad";
     }
-
 
     public static String lastDigitOfNumber(long number) {
         int lastDigit = (int) (number % 10);
@@ -29,12 +34,5 @@ public class Numbers {
         int firstPartOfNumber = number / 100;
         int secondPartOfNumber = (number < 0) ? -number % 100 : number % 100;
         return firstPartOfNumber + secondPartOfNumber;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(positiveNumbers(-1, -1, -1));
-        System.out.println(lastDigitOfNumber("56543334"));
-        System.out.println(sumOfNumbers(-1234));
-
     }
 }

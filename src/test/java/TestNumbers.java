@@ -7,13 +7,34 @@ public class TestNumbers {
     @ParameterizedTest
     @CsvSource({
             "2, 2, 2, 'excellent'",
-            "0, 4, 5, 'good'",
-            "-1, 0, 2, 'fine'",
-            "0, 0, 0, 'bad'",
-            "-2, -2, -2, 'bad'",
             "0x7fffffff, 0x7fffffff, 0x7fffffff, 'excellent'"
     })
-    public void testPositiveNumbers(int a, int b, int c, String expectedResult) {
+    public void testExcellent(int a, int b, int c, String expectedResult) {
+        Assertions.assertEquals(expectedResult, Numbers.positiveNumbers(a, b, c));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "0, 4, 5, 'good'"
+    })
+    public void testGood(int a, int b, int c, String expectedResult) {
+        Assertions.assertEquals(expectedResult, Numbers.positiveNumbers(a, b, c));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "-1, 0, 2, 'fine'"
+    })
+    public void testFine(int a, int b, int c, String expectedResult) {
+        Assertions.assertEquals(expectedResult, Numbers.positiveNumbers(a, b, c));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "0, 0, 0, 'bad'",
+            "-2, -2, -2, 'bad'"
+    })
+    public void testBad(int a, int b, int c, String expectedResult) {
         Assertions.assertEquals(expectedResult, Numbers.positiveNumbers(a, b, c));
     }
 
@@ -26,7 +47,7 @@ public class TestNumbers {
             "0, '0 - последняя цифра числа '",
             "-35, '5 - последняя цифра числа '"
     })
-    public void testPositiveNumbers(long number, String expectedResult) {
+    public void testLastDigitOfNumber(long number, String expectedResult) {
         Assertions.assertEquals(expectedResult + number, Numbers.lastDigitOfNumber(number));
     }
 
@@ -39,7 +60,7 @@ public class TestNumbers {
             "0, '0 - последняя цифра числа '",
             "-35, '5 - последняя цифра числа '"
     })
-    public void testPositiveNumbers(String number, String expectedResult) {
+    public void testLastDigitOfNumberString(String number, String expectedResult) {
         Assertions.assertEquals(expectedResult + number, Numbers.lastDigitOfNumber(number));
     }
 
