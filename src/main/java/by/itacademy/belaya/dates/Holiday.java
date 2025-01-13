@@ -19,4 +19,8 @@ public class Holiday {
         HOLIDAYS.add("11-7");
         HOLIDAYS.add("12-25");
     }
+
+    public static boolean isHoliday(int month, int day) {
+        return HOLIDAYS.contains(month + "-" + day);
+    }
 }
