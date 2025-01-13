@@ -2,7 +2,7 @@ package by.itcademy;
 
 import java.time.Month;
 
-public class WriteDates {
+public class DatesFromNumbers {
     public static String writeDate(int month, int day) {
         if (month < 1 || month > 12 ||
                 day < 1 || day > 31 ||
