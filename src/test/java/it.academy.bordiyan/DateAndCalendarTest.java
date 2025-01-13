@@ -8,7 +8,13 @@ public class DateAndCalendarTest {
 
     @Test
     @DisplayName("Такой даты не существует")
-    public void dateCalendarTest(){
+    public void dateCalendarTest1() {
         Assertions.assertEquals("Такой даты не существует", DateAndCalendar.dateCalendar(13, 32));
+    }
+
+    @Test
+    @DisplayName("Праздничный день")
+    public void dateCalendar2() {
+        Assertions.assertEquals("Праздничный день", DateAndCalendar.dateCalendar(1,7));
     }
 }
