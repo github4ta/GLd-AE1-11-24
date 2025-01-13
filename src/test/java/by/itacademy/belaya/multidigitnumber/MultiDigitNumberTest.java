@@ -19,4 +19,13 @@ public class MultiDigitNumberTest {
         Assertions.assertEquals("4 - последняя цифра числа -104894",
                 MultiDigitNumber.getMessageAboutLastDigit(-104894));
     }
+
+    @Test
+    @DisplayName("Number is zero")
+    public void test3() {
+        IllegalArgumentException exception = Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> MultiDigitNumber.getMessageAboutLastDigit(0));
+        Assertions.assertEquals("Число должно быть многозначным", exception.getMessage());
+    }
 }
