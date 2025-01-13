@@ -1,7 +1,7 @@
 package by.itacademy.belaya.numbers;
 
 public class Numbers {
-    public static String classify(int number1, int number2, int number3) {
+    public static String getClassificationForNumbers(int number1, int number2, int number3) {
         int count = 0;
         if (number1 > 0) {
             count++;
