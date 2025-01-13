@@ -19,4 +19,11 @@ public class DatesTest {
         Assertions.assertEquals("Праздничный день",
                 Dates.getClassificationForDates(1, 1));
     }
+
+    @Test
+    @DisplayName("Regular non-holiday date")
+    public void test3() {
+        Assertions.assertEquals("14 марта",
+                Dates.getClassificationForDates(3, 14));
+    }
 }
