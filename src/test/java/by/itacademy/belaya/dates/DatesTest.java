@@ -12,4 +12,11 @@ public class DatesTest {
         Assertions.assertEquals("такой даты не существует",
                 Dates.getClassificationForDates(0, -1));
     }
+
+    @Test
+    @DisplayName("Holiday")
+    public void test2() {
+        Assertions.assertEquals("Праздничный день",
+                Dates.getClassificationForDates(1, 1));
+    }
 }
