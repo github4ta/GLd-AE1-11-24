@@ -17,4 +17,10 @@ public class DateAndCalendarTest {
     public void dateCalendar2() {
         Assertions.assertEquals("Праздничный день", DateAndCalendar.dateCalendar(1,7));
     }
+
+    @Test
+    @DisplayName("MARCH 26")
+    public void dateCalendar3() {
+        Assertions.assertEquals("MARCH 26", DateAndCalendar.dateCalendar(3,26));
+    }
 }
