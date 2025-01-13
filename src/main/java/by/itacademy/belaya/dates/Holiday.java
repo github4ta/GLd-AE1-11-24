@@ -7,4 +7,16 @@ public class Holiday {
 
     private static final Set<String> HOLIDAYS = new HashSet<>();
 
+    static {
+        HOLIDAYS.add("1-1");
+        HOLIDAYS.add("1-2");
+        HOLIDAYS.add("1-7");
+        HOLIDAYS.add("3-8");
+        HOLIDAYS.add("5-1");
+        HOLIDAYS.add("5-9");
+        HOLIDAYS.add("5-14");
+        HOLIDAYS.add("7-3");
+        HOLIDAYS.add("11-7");
+        HOLIDAYS.add("12-25");
+    }
 }
