@@ -12,4 +12,11 @@ public class MultiDigitNumberTest {
         Assertions.assertEquals("5 - последняя цифра числа 15",
                 MultiDigitNumber.getMessageAboutLastDigit(15));
     }
+
+    @Test
+    @DisplayName("Negative multi-digit number")
+    public void test2() {
+        Assertions.assertEquals("4 - последняя цифра числа -104894",
+                MultiDigitNumber.getMessageAboutLastDigit(-104894));
+    }
 }
