@@ -62,4 +62,10 @@ public class TimeFormatterTest {
     public void test8() {
         Assertions.assertEquals("59 минут 59 секунд", TimeFormatter.getFormattedTime(3599));
     }
+
+    @Test
+    @DisplayName("Max seconds without minutes")
+    public void test9() {
+        Assertions.assertEquals("59 секунд", TimeFormatter.getFormattedTime(59));
+    }
 }
