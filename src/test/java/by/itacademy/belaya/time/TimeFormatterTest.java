@@ -80,4 +80,10 @@ public class TimeFormatterTest {
     public void test11() {
         Assertions.assertEquals("2 часа 1 минута", TimeFormatter.getFormattedTime(7260));
     }
+
+    @Test
+    @DisplayName("Hours and seconds")
+    public void test12() {
+        Assertions.assertEquals("2 часа 2 секунды", TimeFormatter.getFormattedTime(7202));
+    }
 }
