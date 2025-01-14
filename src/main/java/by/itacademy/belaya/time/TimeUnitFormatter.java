@@ -25,5 +25,10 @@ public enum TimeUnitFormatter {
     private static int getLastDigit(long timeUnit) {
         return (int) (timeUnit % 10);
     }
+
+    private static boolean isTeen(long timeUnit) {
+        int lastTwoDigits = getLastTwoDigits(timeUnit);
+        return lastTwoDigits >= 11 && lastTwoDigits <= 14;
+    }
 }
 
