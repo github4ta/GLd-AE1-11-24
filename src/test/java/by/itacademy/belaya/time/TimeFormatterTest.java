@@ -42,4 +42,11 @@ public class TimeFormatterTest {
         Assertions.assertEquals("2 часа 2 минуты 2 секунды",
                 TimeFormatter.getFormattedTime(7322));
     }
+
+    @Test
+    @DisplayName("Teen values")
+    public void test6() {
+        Assertions.assertEquals("3 часа 7 минут 14 секунд",
+                TimeFormatter.getFormattedTime(11234));
+    }
 }
