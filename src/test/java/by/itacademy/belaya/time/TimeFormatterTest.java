@@ -35,4 +35,11 @@ public class TimeFormatterTest {
         Assertions.assertEquals("1 час 1 минута 1 секунда",
                 TimeFormatter.getFormattedTime(3661));
     }
+
+    @Test
+    @DisplayName("Dual values")
+    public void test5() {
+        Assertions.assertEquals("2 часа 2 минуты 2 секунды",
+                TimeFormatter.getFormattedTime(7322));
+    }
 }
