@@ -21,5 +21,9 @@ public enum TimeUnitFormatter {
     private static int getLastTwoDigits(long timeUnit) {
         return (int) (timeUnit % 100);
     }
+
+    private static int getLastDigit(long timeUnit) {
+        return (int) (timeUnit % 10);
+    }
 }
 
