@@ -35,5 +35,10 @@ public enum TimeUnitFormatter {
         int lastDigit = getLastDigit(timeUnit);
         return lastDigit == 1;
     }
+
+    private static boolean isDual(long timeUnit) {
+        int lastDigit = getLastDigit(timeUnit);
+        return lastDigit >= 2 && lastDigit <= 4;
+    }
 }
 
