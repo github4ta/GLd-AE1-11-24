@@ -1,35 +1,28 @@
 import jdk.jfr.Description;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 public class LastNumbersTest {
-    @Test
-    @Description("Test ordinary digit")
-    public void checkOrdinaryDigit() {
-        Assertions.assertEquals("3 - последняя цифра числа 123", LastNumber.sendLastNumber(123));
+    @ParameterizedTest
+    @Description("Test ordinary digits")
+    @CsvSource({
+            "'3 - последняя цифра числа 123', 123",
+            "'0 - последняя цифра числа -100',-100",
+            "'7 - последняя цифра числа 2147483647',2147483647"
+
+    })
+    public void checkOrdinaryDigits(String expectedResult, int number) {
+        Assertions.assertEquals(expectedResult, LastNumber.getLastDigitAsString(number));
     }
 
-    @Test
-    @Description("Test zero digit")
-    public void checkZeroDigit() {
-        Assertions.assertEquals("irrelevant number", LastNumber.sendLastNumber(0));
-    }
-
-    @Test
-    @Description("Test irrelevant digit")
-    public void checkIrrelevantDigit() {
-        Assertions.assertEquals("irrelevant number", LastNumber.sendLastNumber(1));
-    }
-
-    @Test
-    @Description("Test negative digit")
-    public void checkNegativeDigit() {
-        Assertions.assertEquals("0 - последняя цифра числа -100", LastNumber.sendLastNumber(-100));
-    }
-
-    @Test
-    @Description("Test large digit")
-    public void checkLargeDigit() {
-        Assertions.assertEquals("7 - последняя цифра числа 2147483647", LastNumber.sendLastNumber(Integer.MAX_VALUE));
+    @ParameterizedTest
+    @Description("Test irrelevant digits")
+    @CsvSource({
+            "'irrelevant number', 0",
+            "'irrelevant number',1"
+    })
+    public void checkIrrelevantDigits(String expectedResult, int number) {
+        Assertions.assertEquals(expectedResult, LastNumber.getLastDigitAsString(number));
     }
 }
