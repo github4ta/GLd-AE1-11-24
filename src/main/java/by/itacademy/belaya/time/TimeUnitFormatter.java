@@ -18,6 +18,19 @@ public enum TimeUnitFormatter {
         this.pluralForm = pluralForm;
     }
 
+    public String getWordForm(long timeUnit) {
+        if (isTeen(timeUnit)) {
+            return pluralForm;
+        }
+        if (isSingular(timeUnit)) {
+            return singularForm;
+        }
+        if (isDual(timeUnit)) {
+            return dualForm;
+        }
+        return pluralForm;
+    }
+
     private static int getLastTwoDigits(long timeUnit) {
         return (int) (timeUnit % 100);
     }
