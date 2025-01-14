@@ -28,4 +28,11 @@ public class TimeFormatterTest {
         Assertions.assertEquals("2562047788015215 часов 30 минут 7 секунд",
                 TimeFormatter.getFormattedTime(Long.MAX_VALUE));
     }
+
+    @Test
+    @DisplayName("Singular values")
+    public void test4() {
+        Assertions.assertEquals("1 час 1 минута 1 секунда",
+                TimeFormatter.getFormattedTime(3661));
+    }
 }
