@@ -49,4 +49,11 @@ public class TimeFormatterTest {
         Assertions.assertEquals("3 часа 7 минут 14 секунд",
                 TimeFormatter.getFormattedTime(11234));
     }
+
+    @Test
+    @DisplayName("Plural values")
+    public void test7() {
+        Assertions.assertEquals("5 часов 5 минут 5 секунд",
+                TimeFormatter.getFormattedTime(18305));
+    }
 }
