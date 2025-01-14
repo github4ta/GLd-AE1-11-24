@@ -7,4 +7,8 @@ public class TimeFormatter {
     private static BigInteger getHours(long totalSeconds) {
         return BigInteger.valueOf(totalSeconds / 3600);
     }
+
+    private static BigInteger getMinutes(long totalSeconds) {
+        return BigInteger.valueOf(totalSeconds % 3600 / 60);
+    }
 }
