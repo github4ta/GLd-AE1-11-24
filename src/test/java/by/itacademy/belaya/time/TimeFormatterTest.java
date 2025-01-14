@@ -14,4 +14,11 @@ public class TimeFormatterTest {
                 () -> TimeFormatter.getFormattedTime(-100));
         Assertions.assertEquals("Время не может быть отрицательным", exception.getMessage());
     }
+
+    @Test
+    @DisplayName("Zero seconds")
+    public void test2() {
+        Assertions.assertEquals("0 секунд",
+                TimeFormatter.getFormattedTime(0));
+    }
 }
