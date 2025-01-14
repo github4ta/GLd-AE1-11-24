@@ -11,4 +11,8 @@ public class TimeFormatter {
     private static BigInteger getMinutes(long totalSeconds) {
         return BigInteger.valueOf(totalSeconds % 3600 / 60);
     }
+
+    private static BigInteger getRemainingSeconds(long totalSeconds) {
+        return BigInteger.valueOf(totalSeconds % 60);
+    }
 }
