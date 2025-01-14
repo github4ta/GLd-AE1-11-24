@@ -15,4 +15,8 @@ public class TimeFormatter {
     private static BigInteger getRemainingSeconds(long totalSeconds) {
         return BigInteger.valueOf(totalSeconds % 60);
     }
+
+    private static boolean isNegative(long totalSeconds) {
+        return totalSeconds < 0;
+    }
 }
