@@ -1,4 +1,4 @@
-public enum Month {
+public enum Months {
     JANUARY(1),
     FEBRUARY(2),
     MARCH(3),
@@ -14,7 +14,7 @@ public enum Month {
 
     private final int number;
 
-    Month(int number) {
+    Months(int number) {
         this.number = number;
     }
 
@@ -22,8 +22,8 @@ public enum Month {
         return number;
     }
 
-    public static Month fromInt(int i) {
-        for (Month month : values()) {
+    public static Months fromInt(int i) {
+        for (Months month : values()) {
             if (month.getMonthNumber() == i) {
                 return month;
             }
