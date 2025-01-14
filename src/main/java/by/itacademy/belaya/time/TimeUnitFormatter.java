@@ -17,5 +17,9 @@ public enum TimeUnitFormatter {
         this.dualForm = dualForm;
         this.pluralForm = pluralForm;
     }
+
+    private static int getLastTwoDigits(long timeUnit) {
+        return (int) (timeUnit % 100);
+    }
 }
 
