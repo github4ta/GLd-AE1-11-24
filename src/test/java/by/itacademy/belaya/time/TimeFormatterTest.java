@@ -86,4 +86,10 @@ public class TimeFormatterTest {
     public void test12() {
         Assertions.assertEquals("2 часа 2 секунды", TimeFormatter.getFormattedTime(7202));
     }
+
+    @Test
+    @DisplayName("Only minutes")
+    public void test13() {
+        Assertions.assertEquals("2 минуты", TimeFormatter.getFormattedTime(120));
+    }
 }
