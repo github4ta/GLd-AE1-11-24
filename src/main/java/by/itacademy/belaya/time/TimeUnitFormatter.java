@@ -30,5 +30,10 @@ public enum TimeUnitFormatter {
         int lastTwoDigits = getLastTwoDigits(timeUnit);
         return lastTwoDigits >= 11 && lastTwoDigits <= 14;
     }
+
+    private static boolean isSingular(long timeUnit) {
+        int lastDigit = getLastDigit(timeUnit);
+        return lastDigit == 1;
+    }
 }
 
