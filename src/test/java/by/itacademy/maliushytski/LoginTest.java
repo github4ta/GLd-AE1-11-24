@@ -29,10 +29,11 @@ public class LoginTest {
     public void testFooterCopyrightText() {
         String expectedEntryName = "Вход";
         By loginButtonLocator = By.xpath(HomePageLocators.BUTTON_LOGIN);
+        wait.until(ExpectedConditions.elementToBeClickable(loginButtonLocator));
         WebElement loginButtonElement = driver.findElement(loginButtonLocator);
-        wait.until(ExpectedConditions.elementToBeClickable(loginButtonElement));
         loginButtonElement.click();
         By entryLocator = By.xpath(LoginPageLocators.TITLE_LOGIN);
+        wait.until(ExpectedConditions.elementToBeClickable(entryLocator));
         WebElement entryElement = driver.findElement(entryLocator);
         Assertions.assertEquals(expectedEntryName, entryElement.getText());
     }
