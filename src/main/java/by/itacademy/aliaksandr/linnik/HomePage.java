@@ -8,6 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomePage {
 
+    public HomePage(ChromeDriver driver) {
+        this.driver = driver;
+    }
+
     ChromeDriver driver = new ChromeDriver();
 
     @BeforeEach
