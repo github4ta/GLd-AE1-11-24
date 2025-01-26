@@ -26,10 +26,9 @@ public class LoginTest {
     @Test
     public void testLoginWindowIsOpend() {
         HomePage hp = new HomePage(driver);
-        LoginPage lp = new LoginPage(driver);
         hp.clickButtonLogin();
+        LoginPage lp = new LoginPage(driver);
         actual = lp.getTitleLoginText();
         Assertions.assertEquals("Вход", actual);
-
     }
 }

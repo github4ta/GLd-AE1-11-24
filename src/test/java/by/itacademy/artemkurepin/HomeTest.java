@@ -9,12 +9,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class HomeTest {
     public ChromeDriver driver;
     public String actual;
-    public final String https = "https://www.onliner.by/";
+    public final String url = "https://www.onliner.by/";
 
     @BeforeEach
     public void beforeEach() {
         driver = new ChromeDriver();
-        driver.get(https);
+        driver.get(url);
     }
 
     @AfterEach
@@ -29,6 +29,5 @@ public class HomeTest {
         actual = hp.getFooterCopyrightText();
         Assertions.assertEquals("© 2001—2025 Onlíner", actual);
     }
-
 
 }
