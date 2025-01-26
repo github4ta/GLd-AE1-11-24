@@ -11,9 +11,9 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    public void getTitleLoginText() {
+    public String getTitleLoginText() {
         driver = new ChromeDriver();
-        driver.findElement(By.xpath(LoginPageLocators.TITLE_LOGIN));
+        return driver.findElement(By.xpath(LoginPageLocators.TITLE_LOGIN)).getText();
     }
 
     public void fillFieldEmail(String email) {
