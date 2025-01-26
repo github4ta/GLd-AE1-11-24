@@ -12,7 +12,7 @@ public class LoginPage {
     }
 
     public String getTitleLoginText() {
-        String xPath = "//div[@class=\'auth-bar__item auth-bar__item--text\'";
+        String xPath = "//div[@class=\'auth-bar__item auth-bar__item--text\']";
         WebElement webElement = driver.findElement(By.xpath(xPath));
         return webElement.getText();
     }

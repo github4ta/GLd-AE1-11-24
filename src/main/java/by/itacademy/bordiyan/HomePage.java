@@ -14,10 +14,10 @@ public class HomePage {
         this.driver = driver;
     }
 
-    @BeforeEach
+   /* @BeforeEach
     public void beforeEach() {
         driver.get("https://www.onliner.by/");
-    }
+    }*/
 
 
     public void clickButtonLogin() {
@@ -28,7 +28,7 @@ public class HomePage {
     }
 
     public void clickMenuLinkForum() {
-        String xPath = "//span[@class=\'b-main-navigation__text\"][text()=\'Форум\']";
+        String xPath = "//span[@class=\'b-main-navigation__text\'][text()=\'Форум\']";
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
         webElement.click();
@@ -49,8 +49,8 @@ public class HomePage {
         webElement.click();
     }
 
-    @AfterEach
+  /*  @AfterEach
     public void afterEach() {
         driver.quit();
-    }
+    }*/
 }
