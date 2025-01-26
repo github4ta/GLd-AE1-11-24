@@ -30,7 +30,7 @@ public class LoginPage {
     }
 
     public void clickButtonLogin() {
-        By xPath = By.xpath(HomePageLocators. BUTTON_LOGIN);
+        By xPath = By.xpath(HomePageLocators.BUTTON_LOGIN);
         WebElement loginButton = driver.findElement(xPath);
         loginButton.click();
     }
