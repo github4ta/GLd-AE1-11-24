@@ -21,7 +21,6 @@ public class LoginTest {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
         homePage.clickButtonLogin();
-        loginPage.getTitleLoginText();
         Assertions.assertEquals("Вход", loginPage.getTitleLoginText());
     }
 
