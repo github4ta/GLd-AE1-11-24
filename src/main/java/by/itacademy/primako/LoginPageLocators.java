@@ -1,8 +1,8 @@
 package by.itacademy.primako;
 
 public class LoginPageLocators {
-    public static final TITLE_LOGIN ="/html/body/div[3]/div/div/div/div/div/div/div/div[2]/div/div[1]";
-    public static final FIELD_EMAIL ="/html/body/div[3]/div/div/div/div/div/div/div/div[2]/div/form/div[1]/div/div[2]/div/div/div/div/input";
-    public static final FIELD_PASSWORD ="/html/body/div[3]/div/div/div/div/div/div/div/div[2]/div/form/div[2]/div/div/div/div/input";
-    public static final BUTTON_LOGIN ="/html/body/div[3]/div/div/div/div/div/div/div/div[2]/div/form/div[3]/button";
+    public static final String TITLE_LOGIN = "//div[@class=\"auth-form__title auth-form__title_big auth-form__title_condensed-default\"]";
+    public static final String FIELD_EMAIL = "//input[@placeholder=\"Ник или e-mail\"]";
+    public static final String FIELD_PASSWORD = "//input[@placeholder=\"Пароль\"]";
+    public static final String BUTTON_LOGIN = "//button[@class=\"auth-button auth-button_primary auth-button_middle auth-form__button auth-form__button_width_full\"]";
 }

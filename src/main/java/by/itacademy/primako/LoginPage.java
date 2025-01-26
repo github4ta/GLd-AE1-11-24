@@ -38,4 +38,5 @@ public class LoginPage {
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
         webElement.click();
+    }
 }

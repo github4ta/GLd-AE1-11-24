@@ -25,7 +25,7 @@ public class HomePage {
         webElement.click();
     }
 
-    public getFooterCopyrightText() {
+    public String getFooterCopyrightText() {
         String xPath = "/html/body/div[1]/footer/div/div/div/div[2]/div[2]";
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
