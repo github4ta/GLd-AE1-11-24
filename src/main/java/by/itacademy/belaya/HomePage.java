@@ -34,4 +34,11 @@ public class HomePage {
 
         return actual;
     }
+
+    public void clickFooterLinkAboutCompany() {
+        String xPath = HomePageLocators.FOOTER_LINK_ABOUT_COMPANY;
+        By byXPath = By.xpath(xPath);
+        WebElement webElement = driver.findElement(byXPath);
+        webElement.click();
+    }
 }
