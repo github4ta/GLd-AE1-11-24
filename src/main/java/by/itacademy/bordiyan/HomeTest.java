@@ -1,5 +1,6 @@
 package by.itacademy.bordiyan;
 
+import by.itacademy.bordiyan.HomePage;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
