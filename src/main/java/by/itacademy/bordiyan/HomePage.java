@@ -27,16 +27,15 @@ public class HomePage {
     }
 
     public String getFooterCopyrightText() {
-        String xPath = By.xpath(HomePageLocators.FOOTER_COPYRIGHT);
+        By xPath = By.xpath(HomePageLocators.FOOTER_COPYRIGHT);
         WebElement webElement = driver.findElement(xPath);
         String actual = webElement.getText();
         return actual;
     }
 
     public void clickFooterLinkAboutCompany() {
-        String xPath = "//a[@href=\'https://blog.onliner.by/about\']";
-        By byXpath = By.xpath(xPath);
-        WebElement webElement = driver.findElement(byXpath);
+        By xPath = By.xpath(HomePageLocators.FOOTER_LINK_ABOUT_COMPANY);
+        WebElement webElement = driver.findElement(xPath);
         webElement.click();
     }
 }
