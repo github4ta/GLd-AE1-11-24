@@ -34,4 +34,11 @@ public class LoginPage {
         WebElement webElement = driver.findElement(byXPath);
         webElement.sendKeys(password);
     }
+
+    public void clickButtonLogin() {
+        String xPath = LoginPageLocators.BUTTON_LOGIN;
+        By byXpath = By.xpath(xPath);
+        WebElement webElement = driver.findElement(byXpath);
+        webElement.click();
+    }
 }
