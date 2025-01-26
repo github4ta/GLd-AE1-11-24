@@ -25,4 +25,13 @@ public class HomePage {
         WebElement webElement = driver.findElement(byXPath);
         webElement.click();
     }
+
+    public String getFooterCopyrightText() {
+        String xPath = HomePageLocators.FOOTER_COPYRIGHT;
+        By byXPath = By.xpath(xPath);
+        WebElement webElement = driver.findElement(byXPath);
+        String actual = webElement.getText();
+
+        return actual;
+    }
 }
