@@ -18,8 +18,8 @@ public class LoginPage {
     }
 
     public void fillFieldEmail(String email) {
-        String xPath = By.xpath(HomePageLocators.FOOTER_COPYRIGHT);
-        WebElement webElement = driver.findElement(By.xpath(xPath));
+        By xPath = By.xpath(HomePageLocators.FIELD_EMAIL);
+        WebElement webElement = driver.findElement(xPath);
         webElement.sendKeys(email);
     }
 
