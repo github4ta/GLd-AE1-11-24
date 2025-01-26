@@ -27,4 +27,11 @@ public class LoginPage {
         WebElement webElement = driver.findElement(byXPath);
         webElement.sendKeys(email);
     }
+
+    public void fillFieldPassword(String password) {
+        String xPath = LoginPageLocators.FIELD_PASSWORD;
+        By byXPath = By.xpath(xPath);
+        WebElement webElement = driver.findElement(byXPath);
+        webElement.sendKeys(password);
+    }
 }
