@@ -2,7 +2,6 @@ package by.itacademy.ntaranko;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginPage {
     private WebDriver driver;
@@ -12,22 +11,20 @@ public class LoginPage {
     }
 
     public String getTitleLoginText() {
-        driver = new ChromeDriver();
         return driver.findElement(By.xpath(LoginPageLocators.TITLE_LOGIN)).getText();
     }
 
     public void fillFieldEmail(String email) {
-        driver = new ChromeDriver();
         driver.findElement(By.xpath(LoginPageLocators.FIELD_EMAIL)).sendKeys(email);
     }
 
     public void fillFieldPassword(String password) {
-        driver = new ChromeDriver();
         driver.findElement(By.xpath(LoginPageLocators.FIELD_PASSWORD)).sendKeys(password);
     }
 
     public void clickButtonLogin() {
-        driver = new ChromeDriver();
         driver.findElement(By.xpath(LoginPageLocators.BUTTON_LOGIN)).click();
     }
+
+    
 }
