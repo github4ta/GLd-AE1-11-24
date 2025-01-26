@@ -24,14 +24,14 @@ public class LoginPage {
     }
 
     public void fillFieldPassword(String password) {
-        String xPath = "//input[@placeholder=\'Пароль\']";
-        WebElement webElement = driver.findElement(By.xpath(xPath));
+        By xPath = By.xpath(HomePageLocators.FIELD_PASSWORD);
+        WebElement webElement = driver.findElement(xPath);
         webElement.sendKeys(password);
     }
 
     public void clickButtonLogin() {
-        String xPath = "//button[@type=\'submit\']";
-        WebElement loginButton = driver.findElement(By.xpath(xPath));
+        By xPath = By.xpath(HomePageLocators. BUTTON_LOGIN);
+        WebElement loginButton = driver.findElement(xPath);
         loginButton.click();
     }
 }
