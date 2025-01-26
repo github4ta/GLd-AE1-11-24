@@ -12,13 +12,13 @@ public class LoginPage {
     }
 
     public String getTitleLoginText() {
-        String xPath = "//div[@class=\'auth-bar__item auth-bar__item--text\']";
-        WebElement webElement = driver.findElement(By.xpath(xPath));
+        By xPath = By.xpath(HomePageLocators.TITLE_LOGIN);
+        WebElement webElement = driver.findElement(xPath);
         return webElement.getText();
     }
 
     public void fillFieldEmail(String email) {
-        String xPath = "//input[@placeholder=\'Ник или e-mail\']";
+        String xPath = By.xpath(HomePageLocators.FOOTER_COPYRIGHT);
         WebElement webElement = driver.findElement(By.xpath(xPath));
         webElement.sendKeys(email);
     }
