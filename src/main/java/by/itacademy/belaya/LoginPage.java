@@ -20,4 +20,11 @@ public class LoginPage {
 
         return actual;
     }
+
+    public void fillFieldEmail(String email) {
+        String xPath = LoginPageLocators.FIELD_EMAIL;
+        By byXPath = By.xpath(xPath);
+        WebElement webElement = driver.findElement(byXPath);
+        webElement.sendKeys(email);
+    }
 }
