@@ -1,7 +1,6 @@
 package by.itacademy.belaya;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,6 +12,15 @@ public class LoginTest {
     public void beforeEach() {
         driver = new ChromeDriver();
         driver.get("https://www.onliner.by/");
+    }
+
+    @Test
+    @DisplayName("Форма для входа содержит текст Вход")
+    public void testLoginText() {
+        HomePage homePage = new HomePage(driver);
+        LoginPage loginPage = new LoginPage(driver);
+        homePage.clickButtonLogin();
+        Assertions.assertEquals("Вход", loginPage.getTitleLoginText());
     }
 
     @AfterEach
