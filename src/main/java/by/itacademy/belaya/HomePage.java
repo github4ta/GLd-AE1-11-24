@@ -18,4 +18,11 @@ public class HomePage {
         WebElement webElement = driver.findElement(byXPath);
         webElement.click();
     }
+
+    public void clickMenuLinkForum() {
+        String xPath = HomePageLocators.MENU_LINK_FORUM;
+        By byXPath = By.xpath(xPath);
+        WebElement webElement = driver.findElement(byXPath);
+        webElement.click();
+    }
 }
