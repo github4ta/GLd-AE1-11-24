@@ -12,11 +12,11 @@ public class HomePage {
     }
 
     public void clickButtonLogin() {
-        driver.findElement(By.xpath(HomePageLocators.BUTTON_LOGIN));
+        driver.findElement(By.xpath(HomePageLocators.BUTTON_LOGIN)).click();
     }
 
     public void clickMenuLinkForum() {
-        driver.findElement(By.xpath(HomePageLocators.MENU_LINK_FORUM));
+        driver.findElement(By.xpath(HomePageLocators.MENU_LINK_FORUM)).click();
     }
 
     public String getFooterCopyrightText() {
@@ -24,7 +24,7 @@ public class HomePage {
     }
 
     public void clickFooterLinkAboutCompany() {
-        driver.findElement(By.xpath(HomePageLocators.FOOTER_LINK_ABOUT_COMPANY));
+        driver.findElement(By.xpath(HomePageLocators.FOOTER_LINK_ABOUT_COMPANY)).click();
     }
 
 }
