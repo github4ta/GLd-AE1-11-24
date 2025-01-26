@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPageLocators {
-    WebDriver driver;
+    private WebDriver driver;
     public static final String TITLE_LOGIN = "//div[@class='auth-form__title auth-form__title_big auth-form__title_condensed-default']";
     public static final String FIELD_EMAIL = "//input[@placeholder='Ник или e-mail']";
     public static final String FIELD_PASSWORD = "//input[@type='password']";
