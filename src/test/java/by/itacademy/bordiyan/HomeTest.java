@@ -2,10 +2,11 @@ package by.itacademy.bordiyan;
 
 import by.itacademy.bordiyan.HomePage;
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomeTest {
-    ChromeDriver driver;
+    private WebDriver driver;
 
     @BeforeEach
     public void beforeEach() {
