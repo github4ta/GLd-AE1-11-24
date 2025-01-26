@@ -14,12 +14,6 @@ public class HomePage {
         this.driver = driver;
     }
 
-   /* @BeforeEach
-    public void beforeEach() {
-        driver.get("https://www.onliner.by/");
-    }*/
-
-
     public void clickButtonLogin() {
         String xPath = "//div[text()='Вход']";
         By byXpath = By.xpath(xPath);
@@ -48,9 +42,4 @@ public class HomePage {
         WebElement webElement = driver.findElement(byXpath);
         webElement.click();
     }
-
-  /*  @AfterEach
-    public void afterEach() {
-        driver.quit();
-    }*/
-}
+ }
