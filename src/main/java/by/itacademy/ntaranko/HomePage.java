@@ -22,9 +22,9 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageLocators.MENU_LINK_FORUM));
     }
 
-    public void getFooterCopyrightText() {
+    public String getFooterCopyrightText() {
         driver = new ChromeDriver();
-        driver.findElement(By.xpath(HomePageLocators.FOOTER_COPYRIGHT));
+        return driver.findElement(By.xpath(HomePageLocators.FOOTER_COPYRIGHT)).getText();
     }
 
     public void clickFooterLinkAboutCompany() {
