@@ -18,10 +18,10 @@ public class LoginTest {
 
     @Test
     public void logFormIsExist() {
-        HomePageLocators homePageLocators = new HomePageLocators(driver);
-        LoginPageLocators loginPageLocators = new LoginPageLocators(driver);
-        homePageLocators.clickButtonLogin();
-        String result = loginPageLocators.getTitleLoginText();
+        HomePage homePage = new HomePage(driver);
+        LoginPage loginPage = new LoginPage(driver);
+        homePage.clickButtonLogin();
+        String result = loginPage.getTitleLoginText();
         Assertions.assertEquals("Вход", result);
     }
 

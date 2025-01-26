@@ -18,8 +18,8 @@ public class HomeTest {
 
     @Test
     public void footerCopyrightTextIsExist() {
-        HomePageLocators homePageLocators = new HomePageLocators(driver);
-        String result = homePageLocators.getFooterCopyrightText();
+        HomePage homePage = new HomePage(driver);
+        String result = homePage.getFooterCopyrightText();
         Assertions.assertEquals("© 2001—2025 Onlíner", result);
     }
 
