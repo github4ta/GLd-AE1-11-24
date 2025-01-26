@@ -1,5 +1,7 @@
 package by.itacademy.bordiyan;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,7 +12,13 @@ public class HomePage {
         this.driver = driver;
     }
 
-    private ChromeDriver driver;
+    private final ChromeDriver driver;
+
+    @BeforeEach
+    public void beforeEach() {
+        driver.get("https://www.onliner.by/");
+    }
+
 
     public void clickButtonLogin() {
         String xPath = "//div[text()='Вход']";
@@ -26,4 +34,11 @@ public class HomePage {
         webElement.click();
     }
 
+
+
+
+    @AfterEach
+    public void afterEach() {
+        driver.quit();
+    }
 }
