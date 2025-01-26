@@ -34,14 +34,15 @@ public class HomePage {
         webElement.click();
     }
 
-    public void getFooterCopyrightText() {
+    public String getFooterCopyrightText() {
         String xPath = "//div[@class=\'footer-style__copy\']";
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
-        webElement.click();
+        String actual = webElement.getText();
+        return actual;
     }
 
-    public void clickMenuLinkForum() {
+    public void clickFooterLinkAboutCompany() {
         String xPath = "//a[@href=\'https://blog.onliner.by/about\']";
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
