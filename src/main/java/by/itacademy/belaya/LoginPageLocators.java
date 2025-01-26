@@ -7,4 +7,3 @@ public class LoginPageLocators {
     public static final String FIELD_PASSWORD = "//input[@placeholder='Пароль']";
     public static final String BUTTON_LOGIN = "//button[@type='submit']";
 }
-
