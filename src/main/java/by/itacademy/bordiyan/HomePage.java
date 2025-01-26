@@ -15,23 +15,20 @@ public class HomePage {
     }
 
     public void clickButtonLogin() {
-        String xPath = "//div[text()='Вход']";
-        By byXpath = By.xpath(xPath);
-        WebElement webElement = driver.findElement(byXpath);
+        By xPath = By.xpath(HomePageLocators.BUTTON_LOGIN);
+        WebElement webElement = driver.findElement(xPath);
         webElement.click();
     }
 
     public void clickMenuLinkForum() {
-        String xPath = "//span[@class=\'b-main-navigation__text\'][text()=\'Форум\']";
-        By byXpath = By.xpath(xPath);
-        WebElement webElement = driver.findElement(byXpath);
+        By xPath = By.xpath(HomePageLocators.MENU_LINK_FORUM);
+        WebElement webElement = driver.findElement(xPath);
         webElement.click();
     }
 
     public String getFooterCopyrightText() {
-        String xPath = "//div[@class=\'footer-style__copy\']";
-        By byXpath = By.xpath(xPath);
-        WebElement webElement = driver.findElement(byXpath);
+        String xPath = By.xpath(HomePageLocators.FOOTER_COPYRIGHT);
+        WebElement webElement = driver.findElement(xPath);
         String actual = webElement.getText();
         return actual;
     }
@@ -42,4 +39,4 @@ public class HomePage {
         WebElement webElement = driver.findElement(byXpath);
         webElement.click();
     }
- }
+}
