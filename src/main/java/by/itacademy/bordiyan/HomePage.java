@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomePage {
 
-    public WtPage(ChromeDriver driver) {
+    public HomePage(ChromeDriver driver) {
         this.driver = driver;
     }
 
