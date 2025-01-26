@@ -13,10 +13,6 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public HomePage() {
-        this.driver = new ChromeDriver();
-    }
-
     public void clickButtonLogin() {
         WebElement webElement=driver.findElement(By.xpath(HomePageLocators.BUTTON_LOGIN));
         webElement.click();
@@ -26,7 +22,7 @@ public class HomePage {
         webElement.click();
     }
     public String getFooterCopyrightText(){
-        WebElement webElement=driver.findElement(By.xpath(HomePageLocators.MENU_LINK_FORUM));
+        WebElement webElement=driver.findElement(By.xpath(HomePageLocators.FOOTER_COPYRIGHT));
         return webElement.getText();
     }
     public void clickFooterLinkAboutCompany(){
