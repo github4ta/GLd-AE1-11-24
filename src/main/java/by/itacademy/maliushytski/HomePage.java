@@ -9,7 +9,7 @@ public class HomePage {
     private WebDriver driver;
 
     public HomePage(WebDriver driver) {
-        driver = new ChromeDriver();
+        this.driver = driver;
     }
 
     public HomePage clickButtonLogin() {

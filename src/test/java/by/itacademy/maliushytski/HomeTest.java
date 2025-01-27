@@ -1,3 +1,4 @@
+import by.itacademy.maliushytski.HomePage;
 import by.itacademy.maliushytski.HomePageLocators;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -9,21 +10,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomeTest {
-    WebDriver driver;
+    private WebDriver driver;
+    private HomePage homePage;
 
     @BeforeEach
     public void beforeEach() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.onliner.by/");
+        homePage = new HomePage(driver);
     }
 
     @Test
     public void testFooterCopyrightText() {
         String expectedFooterCopyrightText = "© 2001—2025 Onlíner";
-        By footerCopyrightTextLocator = By.xpath(HomePageLocators.FOOTER_COPYRIGHT);
-        WebElement element = driver.findElement(footerCopyrightTextLocator);
-        Assertions.assertEquals(expectedFooterCopyrightText, element.getText());
+        Assertions.assertEquals(expectedFooterCopyrightText, homePage.getFooterCopyrightText());
     }
 
     @AfterEach

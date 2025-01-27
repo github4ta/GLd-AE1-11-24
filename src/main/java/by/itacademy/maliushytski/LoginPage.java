@@ -9,7 +9,7 @@ public class LoginPage {
     private WebDriver driver;
 
     public LoginPage(WebDriver driver) {
-        driver = new ChromeDriver();
+        this.driver = driver;
     }
 
     public String getTitleLoginText() {

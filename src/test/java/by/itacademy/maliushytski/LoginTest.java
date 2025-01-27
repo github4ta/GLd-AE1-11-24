@@ -1,4 +1,6 @@
+import by.itacademy.maliushytski.HomePage;
 import by.itacademy.maliushytski.HomePageLocators;
+import by.itacademy.maliushytski.LoginPage;
 import by.itacademy.maliushytski.LoginPageLocators;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -14,8 +16,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class LoginTest {
-    WebDriver driver;
-    WebDriverWait wait;
+    private WebDriver driver;
+    private WebDriverWait wait;
+    private LoginPage loginPage;
+    private HomePage homePage;
 
     @BeforeEach
     public void beforeEach() {
@@ -23,19 +27,15 @@ public class LoginTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         driver.manage().window().maximize();
         driver.get("https://www.onliner.by/");
+        loginPage = new LoginPage(driver);
+        homePage = new HomePage(driver);
     }
 
     @Test
     public void testFooterCopyrightText() {
         String expectedEntryName = "Вход";
-        By loginButtonLocator = By.xpath(HomePageLocators.BUTTON_LOGIN);
-        wait.until(ExpectedConditions.elementToBeClickable(loginButtonLocator));
-        WebElement loginButtonElement = driver.findElement(loginButtonLocator);
-        loginButtonElement.click();
-        By entryLocator = By.xpath(LoginPageLocators.TITLE_LOGIN);
-        wait.until(ExpectedConditions.elementToBeClickable(entryLocator));
-        WebElement entryElement = driver.findElement(entryLocator);
-        Assertions.assertEquals(expectedEntryName, entryElement.getText());
+        homePage.clickButtonLogin();
+        Assertions.assertEquals(expectedEntryName, loginPage.getTitleLoginText());
     }
 
     @AfterEach
