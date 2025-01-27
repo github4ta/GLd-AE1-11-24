@@ -14,5 +14,4 @@ public class ForumPage {
     public String getTitleForumText() {
         return driver.findElement(By.xpath(ForumPageLocators.TITLE_FORUM)).getText();
     }
-
 }
