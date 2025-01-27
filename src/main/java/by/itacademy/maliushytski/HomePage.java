@@ -3,7 +3,6 @@ package by.itacademy.maliushytski;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomePage {
     private WebDriver driver;
@@ -36,6 +35,17 @@ public class HomePage {
         By footerAboutCompanyLink = By.xpath(HomePageLocators.FOOTER_LINK_ABOUT_COMPANY);
         WebElement menuLinkElement = driver.findElement(footerAboutCompanyLink);
         menuLinkElement.click();
+        return this;
+    }
+
+    public static By returnByLocator(String locator) {
+        return By.xpath(locator);
+    }
+
+    public HomePage clickAcceptCookies() {
+        By acceptCookies = By.xpath(HomePageLocators.ACCEPT_COOKIES);
+        WebElement acceptCookiesElement = driver.findElement(acceptCookies);
+        acceptCookiesElement.click();
         return this;
     }
 }
