@@ -1,17 +1,20 @@
 package by.itacademy;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LoginPage {
-    private ChromeDriver driver;
+import java.sql.Driver;
 
-    public LoginPage(ChromeDriver driver) {
+public class LoginPage {
+    private WebDriver driver;
+
+    public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public String getTitleLoginText() {
+        public String getTitleLoginText() {
         String xPath = LoginPageLocators.TITLE_LOGIN;
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
