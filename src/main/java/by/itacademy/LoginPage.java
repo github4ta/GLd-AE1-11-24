@@ -15,31 +15,27 @@ public class LoginPage {
     }
 
         public String getTitleLoginText() {
-        String xPath = LoginPageLocators.TITLE_LOGIN;
-        By byXpath = By.xpath(xPath);
-        WebElement webElement = driver.findElement(byXpath);
+        By titleLoginText = By.xpath(LoginPageLocators.TITLE_LOGIN);
+        WebElement webElement = driver.findElement(titleLoginText);
         String actual = webElement.getText();
         return actual;
     }
 
     public void fillFieldEmail(String email) {
-        String xPath = LoginPageLocators.FIELD_EMAIL;
-        By byXpath = By.xpath(xPath);
-        WebElement webElement = driver.findElement(byXpath);
+        By fieldEmail = By.xpath(LoginPageLocators.FIELD_EMAIL);
+        WebElement webElement = driver.findElement(fieldEmail);
         webElement.sendKeys(email);
     }
 
     public void fillFieldPassword(String password) {
-        String xPath = LoginPageLocators.FIELD_PASSWORD;
-        By byXpath = By.xpath(xPath);
-        WebElement webElement = driver.findElement(byXpath);
+        By fieldPassword = By.xpath(LoginPageLocators.FIELD_PASSWORD);
+        WebElement webElement = driver.findElement(fieldPassword);
         webElement.sendKeys(password);
     }
 
     public void clickButtonLogin() {
-        String xPath = LoginPageLocators.BUTTON_LOGIN;
-        By byXpath = By.xpath(xPath);
-        WebElement webElement = driver.findElement(byXpath);
+        By buttonLogin = By.xpath(LoginPageLocators.BUTTON_LOGIN);
+        WebElement webElement = driver.findElement(buttonLogin);
         webElement.click();
     }
 }
