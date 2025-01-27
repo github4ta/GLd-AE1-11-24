@@ -13,9 +13,8 @@ public class AboutCompanyPage {
     }
 
     public String getTitleAboutCompanyText() {
-        String xPath = AboutCompanyPageLocators.TITLE_ABOUT_COMPANY;
-        By byXpath = By.xpath(xPath);
-        WebElement webElement = driver.findElement(byXpath);
+        By titleAboutCompanyText = By.xpath(AboutCompanyPageLocators.TITLE_ABOUT_COMPANY);
+        WebElement webElement = driver.findElement(titleAboutCompanyText);
         String actual = webElement.getText();
         return actual;
     }
