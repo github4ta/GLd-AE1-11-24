@@ -12,7 +12,7 @@ public class ForumPage {
     }
 
     public String getTitleForumText() {
-        String xPath = "//a[@href=\"https://forum.onliner.by\"][text()=\"Форум\"]";
+        String xPath = ForumPageLocators.TITLE_FORUM;
         By byXPath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXPath);
         String actual = webElement.getText();
