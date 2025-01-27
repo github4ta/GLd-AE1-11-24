@@ -1,13 +1,14 @@
 package by.itacademy;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AboutCompanyPage {
-    private ChromeDriver driver;
+    private WebDriver driver;
 
-    public AboutCompanyPage(ChromeDriver driver) {
+    public AboutCompanyPage(WebDriver driver) {
         this.driver = driver;
     }
 
