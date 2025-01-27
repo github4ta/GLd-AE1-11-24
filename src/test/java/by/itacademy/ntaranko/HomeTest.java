@@ -11,7 +11,6 @@ public class HomeTest {
     public void start(){
         driver = new ChromeDriver( );
         driver.get("https://www.onliner.by/");
-
     }
 
     @Test
