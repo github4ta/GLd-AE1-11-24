@@ -11,8 +11,8 @@ public class AboutCompanyPage {
         this.driver = driver;
     }
 
-    public String getTitleAboutCompanyText(){
-        String xPath = "//h1[text()=\"Информация о компании\"]";
+    public String getTitleAboutCompanyText() {
+        String xPath = AboutCompanyPageLocators.TITLE_ABOUT_COMPANY;
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
         String actual = webElement.getText();
