@@ -1,10 +1,13 @@
 package by.itacademy;
 
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.sql.Driver;
+
 public class ForumTest {
-    ChromeDriver driver;
+    WebDriver driver;
 
     @BeforeEach
     public void beforeEach(){
