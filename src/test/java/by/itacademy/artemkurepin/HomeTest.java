@@ -9,12 +9,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class HomeTest {
     public ChromeDriver driver;
     public String actual;
-    public final String url = "https://www.onliner.by/";
+    public final String URL = "https://www.onliner.by/";
 
     @BeforeEach
     public void beforeEach() {
         driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(URL);
     }
 
     @AfterEach
