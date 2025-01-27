@@ -1,13 +1,16 @@
 package by.itacademy;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ForumPage {
-    private ChromeDriver driver;
+import java.sql.Driver;
 
-    public ForumPage(ChromeDriver driver) {
+public class ForumPage {
+    private WebDriver driver;
+
+    public ForumPage(WebDriver driver) {
         this.driver = driver;
     }
 
