@@ -1,10 +1,11 @@
 package by.itacademy;
 
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomeTest {
-    ChromeDriver driver;
+    WebDriver driver;
 
     @BeforeEach
     public void beforeEach() {
