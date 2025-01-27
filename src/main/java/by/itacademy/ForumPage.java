@@ -15,9 +15,8 @@ public class ForumPage {
     }
 
     public String getTitleForumText() {
-        String xPath = ForumPageLocators.TITLE_FORUM;
-        By byXPath = By.xpath(xPath);
-        WebElement webElement = driver.findElement(byXPath);
+        By titleForumPage = By.xpath(ForumPageLocators.TITLE_FORUM);
+        WebElement webElement = driver.findElement(titleForumPage);
         String actual = webElement.getText();
         return actual;
     }
