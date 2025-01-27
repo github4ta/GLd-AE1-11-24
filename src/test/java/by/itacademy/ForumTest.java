@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.sql.Driver;
 
 public class ForumTest {
-    WebDriver driver;
+   private WebDriver driver;
 
     @BeforeEach
     public void beforeEach(){
