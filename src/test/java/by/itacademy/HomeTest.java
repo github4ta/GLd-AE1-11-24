@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomeTest {
-    WebDriver driver;
+   private WebDriver driver;
 
     @BeforeEach
     public void beforeEach() {
