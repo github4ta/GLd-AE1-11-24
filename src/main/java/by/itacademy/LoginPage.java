@@ -12,7 +12,7 @@ public class LoginPage {
     }
 
     public String getTitleLoginText() {
-        String xPath = "//div[@class=\"auth-form__title auth-form__title_big auth-form__title_condensed-default\"]";
+        String xPath = LoginPageLocators.TITLE_LOGIN;
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
         String actual = webElement.getText();
@@ -20,21 +20,21 @@ public class LoginPage {
     }
 
     public void fillFieldEmail(String email) {
-        String xPath = "//input[@placeholder=\"Ник или e-mail\"]";
+        String xPath = LoginPageLocators.FIELD_EMAIL;
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
         webElement.sendKeys(email);
     }
 
     public void fillFieldPassword(String password) {
-        String xPath = "//input[@placeholder=\"Пароль\"]";
+        String xPath = LoginPageLocators.FIELD_PASSWORD;
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
         webElement.sendKeys(password);
     }
 
     public void clickButtonLogin() {
-        String xPath = "//button[@class=\"auth-button auth-button_primary auth-button_middle auth-form__button auth-form__button_width_full\"]";
+        String xPath = LoginPageLocators.BUTTON_LOGIN;
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
         webElement.click();
