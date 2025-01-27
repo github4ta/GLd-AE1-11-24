@@ -12,21 +12,21 @@ public class HomePage {
     }
 
     public void clickButtonLogin() {
-        String xPath = "//div[@class=\"auth-bar__item auth-bar__item--text\"]";
+        String xPath = HomePageLocators.BUTTON_LOGIN;
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
         webElement.click();
     }
 
     public void clickMenuLinkForum() {
-        String xPath = "//span[@class=\"b-main-navigation__text\"][text()=\"Форум\"]";
+        String xPath = HomePageLocators.MENU_LINK_FORUM;
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
         webElement.click();
     }
 
     public String getFooterCopyrightText() {
-        String xPath = "//div[@class=\"footer-style__copy\"]";
+        String xPath = HomePageLocators.FOOTER_COPYRIGHT;
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
         String actual = webElement.getText();
@@ -35,7 +35,7 @@ public class HomePage {
     }
 
     public void clickFooterLinkAboutCompany() {
-        String xPath = "//a[@href=\"https://blog.onliner.by/about\"]";
+        String xPath = HomePageLocators.FOOTER_LINK_ABOUT_COMPANY;
         By byXpath = By.xpath(xPath);
         WebElement webElement = driver.findElement(byXpath);
         webElement.click();
