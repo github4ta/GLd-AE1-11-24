@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
-
     private WebDriver driver;
 
     public HomePage(WebDriver driver) {
@@ -27,4 +26,7 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageLocators.FOOTER_LINK_ABOUT_COMPANY)).click();
     }
 
+    public void clickCart() {
+        driver.findElement(By.xpath(HomePageLocators.BUTTON_CART)).click();
+    }
 }
