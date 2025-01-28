@@ -38,4 +38,8 @@ public class HomePage {
         WebElement webElement = driver.findElement(xPath);
         webElement.click();
     }
+    public void clickButtonCart(){
+        driver.findElement(By.xpath(HomePageLocators.CART_BUTTON)).click();
+    }
+
 }

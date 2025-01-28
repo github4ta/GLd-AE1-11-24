@@ -9,8 +9,8 @@ public class CartPage {
         this.driver = driver;
     }
 
-    public String getYourArtIsEmptyText(){
-
+    public String getYourArtIsEmptyText() {
+        return driver.findElement(CartPageLocators.YOUR_ART_IS_EMPTY_TEXT).getText();
     }
 
 }
