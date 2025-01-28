@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomeTest {
-    WebDriver driver;
+    private WebDriver driver;
 
     @BeforeEach
-    public void start(){
-        driver = new ChromeDriver( );
+    public void start() {
+        driver = new ChromeDriver();
         driver.get("https://www.onliner.by/");
     }
 
@@ -23,7 +23,7 @@ public class HomeTest {
     }
 
     @AfterEach
-    public void end(){
+    public void end() {
         driver.quit();
     }
 }
