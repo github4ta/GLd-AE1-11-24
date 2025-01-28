@@ -19,6 +19,8 @@ public class ForumTest {
 
     @Test
     public void forumTitleIsExist() {
+        HomePage homePage = new HomePage(driver);
+        homePage.clickMenuLinkForum();
         ForumPage forumPage = new ForumPage(driver);
         Assertions.assertEquals(expectedForumTitle, forumPage.getTitleForumText());
     }
