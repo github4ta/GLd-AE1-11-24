@@ -25,6 +25,4 @@ public class LoginPage {
     public void clickButtonLogin() {
         driver.findElement(By.xpath(LoginPageLocators.BUTTON_LOGIN)).click();
     }
-
-    
 }
