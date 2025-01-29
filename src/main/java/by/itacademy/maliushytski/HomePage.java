@@ -60,4 +60,11 @@ public class HomePage {
         acceptCookiesElement.click();
         return this;
     }
+
+    public HomePage clickBasketButton() {
+        By basketButton = By.xpath(HomePageLocators.BASKET_BUTTON);
+        WebElement basketButtonElement = driver.findElement(basketButton);
+        basketButtonElement.click();
+        return this;
+    }
 }

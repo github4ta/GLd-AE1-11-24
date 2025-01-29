@@ -9,21 +9,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginTest {
     private WebDriver driver;
-    private LoginPage loginPage;
-    private HomePage homePage;
 
     @BeforeEach
     public void beforeEach() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.onliner.by/");
-        loginPage = new LoginPage(driver);
-        homePage = new HomePage(driver);
+
     }
 
     @Test
     public void testFooterCopyrightText() {
         String expectedEntryName = "Вход";
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
         homePage.clickButtonLogin();
         Assertions.assertEquals(expectedEntryName, loginPage.getTitleLoginText());
     }

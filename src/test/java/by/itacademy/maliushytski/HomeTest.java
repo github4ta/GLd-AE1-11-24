@@ -8,19 +8,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomeTest {
     private WebDriver driver;
-    private HomePage homePage;
 
     @BeforeEach
     public void beforeEach() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.onliner.by/");
-        homePage = new HomePage(driver);
     }
 
     @Test
     public void testFooterCopyrightText() {
         String expectedFooterCopyrightText = "© 2001—2025 Onlíner";
+        HomePage homePage = new HomePage(driver);
         Assertions.assertEquals(expectedFooterCopyrightText, homePage.getFooterCopyrightText());
     }
 
