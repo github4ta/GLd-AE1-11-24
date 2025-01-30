@@ -38,8 +38,20 @@ public class HomePage {
         WebElement webElement = driver.findElement(xPath);
         webElement.click();
     }
-    public void clickButtonCart(){
+
+    public void clickButtonCart() {
         driver.findElement(By.xpath(HomePageLocators.CART_BUTTON)).click();
     }
 
+    public String getFullPublicAgreementsText() {
+        By publicAgreement = By.partialLinkText(HomePageLocators.FULL_PUBLIC_AGREEMENTS);
+        WebElement publicAgreementElement = driver.findElement(publicAgreement);
+        return publicAgreementElement.getText();
+    }
+
+    public String getPartPublicAgreementsText() {
+        By publicAgreement = By.partialLinkText(HomePageLocators.PART_PUBLIC_AGREEMENTS);
+        WebElement publicAgreementElement = driver.findElement(publicAgreement);
+        return publicAgreementElement.getText();
+    }
 }

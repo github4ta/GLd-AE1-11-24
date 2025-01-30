@@ -22,6 +22,20 @@ public class HomeTest {
         Assertions.assertEquals("© 2001—2025 Onlíner", homePage.getFooterCopyrightText());
     }
 
+    @Test
+    public void testFullPartPublicAgreementText() {
+        String expectedPublicAgreementText = "Публичные договоры";
+        HomePage homePage = new HomePage(driver);
+        Assertions.assertEquals(expectedPublicAgreementText, homePage.getPartPublicAgreementsText());
+    }
+
+    @Test
+    public void testPartPublicAgreementText() {
+        String expectedPublicAgreementText = "Публичные договоры";
+        HomePage homePage = new HomePage(driver);
+        Assertions.assertEquals(expectedPublicAgreementText, homePage.getPartPublicAgreementsText());
+    }
+
     @AfterEach
     public void afterEach() {
         driver.quit();
