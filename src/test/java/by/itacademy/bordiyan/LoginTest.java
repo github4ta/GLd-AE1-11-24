@@ -26,7 +26,7 @@ public class LoginTest {
     @Test
     public void getText2() {
         LoginPage page = new LoginPage(driver);
-        Assertions.assertEquals("Все разделы форума", LoginPageLocators.ALL_FORUMS);
+        Assertions.assertEquals("ВСЕ РАЗДЕЛЫ ФОРУМА", page.getAllForums());
     }
 
     @AfterEach
