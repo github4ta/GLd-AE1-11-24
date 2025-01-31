@@ -15,12 +15,18 @@ public class LoginTest {
 
     @Test
     @DisplayName("Проверка на наличие текста Вход")
-    public void getText() {
+    public void getText1() {
         LoginPage page = new LoginPage(driver);
         HomePage page1 = new HomePage(driver);
         page1.clickButtonLogin();
         page.getTitleLoginText();
         Assertions.assertEquals("Вход", page.getTitleLoginText());
+    }
+
+    @Test
+    public void getText2() {
+        LoginPage page = new LoginPage(driver);
+        Assertions.assertEquals("Все разделы форума", LoginPageLocators.ALL_FORUMS);
     }
 
     @AfterEach

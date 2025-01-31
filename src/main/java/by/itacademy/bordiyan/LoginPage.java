@@ -34,5 +34,9 @@ public class LoginPage {
         WebElement loginButton = driver.findElement(xPath);
         loginButton.click();
     }
+
+    public String getAllForums(){
+        return driver.findElement(By.cssSelector(LoginPageLocators.ALL_FORUMS)).getText();
+    }
 }
 

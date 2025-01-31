@@ -8,4 +8,5 @@ public class HomePageLocators {
     public static final String CART_BUTTON = "//a[@title='Корзина']";
     public static final String FULL_PUBLIC_AGREEMENTS = "Публичные договоры";
     public static final String PART_PUBLIC_AGREEMENTS = "Публичные";
+
 }
