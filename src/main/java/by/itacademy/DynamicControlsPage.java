@@ -16,6 +16,7 @@ public class DynamicControlsPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
+
     public void toggleCheckbox() {
         WebElement toggleButton = wait.until(ExpectedConditions.elementToBeClickable(Locators.TOGGLE_CHECK_BOX_BUTTON_REMOVE));
         toggleButton.click();

@@ -31,6 +31,7 @@ public class DynamicControlsTest {
     }
 
 
+
     @AfterEach
     public void afterEach() {
         driver.quit();
