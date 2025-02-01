@@ -1,34 +1,39 @@
 package by.itacademy;
 
+import org.junit.BeforeClass;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class DynamicControlsPageTest {
-    private WebDriver driver;
+    public class DynamicControlsTest {
+        private WebDriver driver;
+        private DynamicControlsPage dynamicControlsPage;
 
-    @BeforeEach
-    public void beforeEach() {
-        driver = new ChromeDriver();
-        driver.get("https://the-internet.herokuapp.com/dynamic_controls");
-    }
+        @BeforeClass
+        public static void setUpInternet() {
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
+            driver.get("https://the-internet.herokuapp.com/dynamic_controls");
+            dynamicControlsPage = new DynamicControlsPage(driver);
+        }
 
-    @Test
-    public void testCheckboxRemoval() {
-        pageMethods.toggleCheckbox();
+        @Test(priority = 1)
+        public void testCheckboxRemoval() {
 
-
-        Assert.assertTrue(pageMethods.isCheckboxDisplayed(), "Чекбокс не исчез!");
-
-        // Проверяем сообщение
-        Assert.assertEquals(pageMethods.getMessageText(), "It's gone!", "Сообщение не совпадает!");
-    }
+            dynamicControlsPage.toggleCheckbox();
 
 
-    @AfterEach
-    public void afterEach() {
-        driver.quit();
+            Assert.assertTrue(dynamicControlsPage.isCheckboxDisplayed(), "Чекбокс не исчез!");
+
+
+            Assert.assertEquals(dynamicControlsPage.getMessageText(), "It's gone!", "Сообщение не совпадает!");
+        }
+
+
+        @AfterEach
+        public void afterEach() {
+            driver.quit();
+        }
     }
 }
