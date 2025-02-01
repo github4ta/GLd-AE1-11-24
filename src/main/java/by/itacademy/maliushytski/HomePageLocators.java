@@ -9,4 +9,7 @@ public class HomePageLocators {
     public static final String FOOTER_LINK_ABOUT_COMPANY = "//a[@href='https://blog.onliner.by/about']";
     public static final String ACCEPT_COOKIES = "//a[@id='submit-button']";
     public static final String BASKET_BUTTON = "//a[@title='Корзина']";
+    public static final String FULL_PUBLIC_AGREEMENTS = "Публичные договоры";
+    public static final String PART_PUBLIC_AGREEMENTS = "Публичные";
+    public static final String TOP_MENU_OPTIONS = "ul.b-main-navigation > li";
 }

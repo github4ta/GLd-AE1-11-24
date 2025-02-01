@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class HomePage {
     private WebDriver driver;
@@ -66,5 +68,23 @@ public class HomePage {
         WebElement basketButtonElement = driver.findElement(basketButton);
         basketButtonElement.click();
         return this;
+    }
+
+    public String getFullPublicAgreementsText() {
+        By publicAgreement = By.linkText(HomePageLocators.FULL_PUBLIC_AGREEMENTS);
+        WebElement publicAgreementElement = driver.findElement(publicAgreement);
+        return publicAgreementElement.getText();
+    }
+
+    public String getPartPublicAgreementsText() {
+        By publicAgreement = By.partialLinkText(HomePageLocators.PART_PUBLIC_AGREEMENTS);
+        WebElement publicAgreementElement = driver.findElement(publicAgreement);
+        return publicAgreementElement.getText();
+    }
+
+    public List<String> getTopMenuTopics() {
+        By topMenuTopics = By.cssSelector(HomePageLocators.TOP_MENU_OPTIONS);
+        List<WebElement> topMenuTopicsElements = driver.findElements(topMenuTopics);
+        return topMenuTopicsElements.stream().map(WebElement::getText).skip(1).collect(Collectors.toList());
     }
 }
