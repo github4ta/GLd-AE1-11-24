@@ -43,6 +43,10 @@ public class DynamicControlsPage {
         WebElement startButton = wait.until(ExpectedConditions.elementToBeClickable(Locators.STARTBUTTON));
         startButton.click();
     }
+
+    public boolean isHelloWorldDisplayed() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.HELLOWORLDTEXT)).isDisplayed();
+    }
 }
 
 
