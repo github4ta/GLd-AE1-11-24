@@ -21,6 +21,15 @@ public class DynamicControlsPage {
         WebElement toggleButton = wait.until(ExpectedConditions.elementToBeClickable(Locators.TOGGLE_CHECK_BOX_BUTTON_REMOVE));
         toggleButton.click();
     }
+
+    public boolean isCheckboxDisplayed() {
+        return wait.until(ExpectedConditions.invisibilityOfElementLocated(Locators.CHECKBOX));
+    }
+
+        public String getMessageText() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.MESSAGE)).getText();
+    }
+
 }
 
 
