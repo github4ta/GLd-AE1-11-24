@@ -16,6 +16,8 @@ public class DynamicControlsPageTest {
     }
 
 
+
+
     @AfterEach
     public void afterEach() {
         driver.quit();
