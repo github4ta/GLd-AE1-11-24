@@ -1,5 +1,4 @@
 package by.itacademy;
 
-public class AnyClass {
-
+public class SomeClass {
 }
