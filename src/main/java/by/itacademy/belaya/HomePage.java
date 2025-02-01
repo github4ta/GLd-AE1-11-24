@@ -13,31 +13,26 @@ public class HomePage {
     }
 
     public void clickButtonLogin() {
-        String xPath = HomePageLocators.BUTTON_LOGIN;
-        By byXPath = By.xpath(xPath);
+        By byXPath = By.xpath(HomePageLocators.BUTTON_LOGIN);
         WebElement webElement = driver.findElement(byXPath);
         webElement.click();
     }
 
     public void clickMenuLinkForum() {
-        String xPath = HomePageLocators.MENU_LINK_FORUM;
-        By byXPath = By.xpath(xPath);
+        By byXPath = By.xpath(HomePageLocators.MENU_LINK_FORUM);
         WebElement webElement = driver.findElement(byXPath);
         webElement.click();
     }
 
     public String getFooterCopyrightText() {
-        String xPath = HomePageLocators.FOOTER_COPYRIGHT;
-        By byXPath = By.xpath(xPath);
+        By byXPath = By.xpath(HomePageLocators.FOOTER_COPYRIGHT);
         WebElement webElement = driver.findElement(byXPath);
-        String actual = webElement.getText();
 
-        return actual;
+        return webElement.getText();
     }
 
     public void clickFooterLinkAboutCompany() {
-        String xPath = HomePageLocators.FOOTER_LINK_ABOUT_COMPANY;
-        By byXPath = By.xpath(xPath);
+        By byXPath = By.xpath(HomePageLocators.FOOTER_LINK_ABOUT_COMPANY);
         WebElement webElement = driver.findElement(byXPath);
         webElement.click();
     }
