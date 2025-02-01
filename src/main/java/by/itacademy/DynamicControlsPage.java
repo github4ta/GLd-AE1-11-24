@@ -8,7 +8,7 @@ public class DynamicControlsPage {
     private WebDriver driver;
 
     public void toggleCheckbox(){
-    WebElement toggleButton = ExpectedConditions.elementToBeClickable(Locators.toggleCheckboxButton);
+    WebElement toggleButton = (WebElement) ExpectedConditions.elementToBeClickable(Locators.CHECKBOX);
         toggleButton.click();
 }
 
