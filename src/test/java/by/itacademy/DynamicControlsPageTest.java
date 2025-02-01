@@ -1,5 +1,6 @@
 package by.itacademy;
 
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -11,16 +12,22 @@ public class DynamicControlsTest {
     private DynamicControlsPage dynamicControlsPage;
 
     @BeforeClass
-    public static void setUpInternet() {
+    public void setUp() {
+        // Установите путь к вашему драйверу (например, ChromeDriver)
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+
+        // Инициализация драйвера
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+
+
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
         dynamicControlsPage = new DynamicControlsPage(driver);
     }
 
-    @Test(priority = 1)
+    @Test()
     public void testCheckboxRemoval() {
-
+        // Убираем чекбокс
         dynamicControlsPage.toggleCheckbox();
 
 
@@ -32,8 +39,11 @@ public class DynamicControlsTest {
 
 
 
-    @AfterEach
-    public void afterEach() {
-        driver.quit();
+    @AfterClass
+    public void tearDown() {
+        // Закрываем браузер
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
