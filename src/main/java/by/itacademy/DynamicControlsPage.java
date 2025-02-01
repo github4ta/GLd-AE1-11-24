@@ -38,6 +38,11 @@ public class DynamicControlsPage {
     public boolean isInputFieldEnabled() {
         return wait.until(ExpectedConditions.elementToBeClickable(Locators.INPUT_FIELD)).isEnabled();
     }
+
+    public void clickStartButton() {
+        WebElement startButton = wait.until(ExpectedConditions.elementToBeClickable(Locators.STARTBUTTON));
+        startButton.click();
+    }
 }
 
 
