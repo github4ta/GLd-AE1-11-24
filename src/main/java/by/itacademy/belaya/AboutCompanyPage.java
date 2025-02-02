@@ -8,6 +8,7 @@ public class AboutCompanyPage {
     private WebDriver driver;
 
     public AboutCompanyPage(WebDriver driver) {
+        this.driver = driver;
     }
 
     public String getTitleAboutCompanyText() {
