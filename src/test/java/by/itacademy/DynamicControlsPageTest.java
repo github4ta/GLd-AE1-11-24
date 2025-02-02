@@ -12,7 +12,8 @@ public class DynamicControlsPageTest {
     private WebDriver driver;
     private DynamicControlsPage dynamicControlsPage;
 
-    @BeforeClass
+    @BeforeClass();
+
     public void beforeClass() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -20,12 +21,22 @@ public class DynamicControlsPageTest {
         dynamicControlsPage = new DynamicControlsPage(driver);
     }
 
-    @Test()
+    @Test
     public void testCheckboxRemoval() {
         dynamicControlsPage.toggleCheckbox();
         Assertions.assertTrue(dynamicControlsPage.isCheckboxDisplayed(), "message");
         Assertions.assertEquals(dynamicControlsPage.getMessageText(), "It's gone!", "Сообщение не совпадает!");
     }
+
+    @Test
+    public void testInputFieldEnabled() {
+        driver.get("https://the-internet.herokuapp.com/dynamic_controls");
+        dynamicControlsPage.toggleInputField();
+        Assertions.assertTrue(dynamicControlsPage.isInputFieldEnabled(), "Поле ввода не активно!");
+        Assertions.assertEquals(dynamicControlsPage.getMessageText(), "It's enabled!", "Сообщение не совпадает!");
+    }
+
+
 
     @AfterClass
     public void afterClass() {
