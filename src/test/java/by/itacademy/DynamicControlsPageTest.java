@@ -24,7 +24,7 @@ public class DynamicControlsPageTest {
     public void testCheckboxRemoval() {
         dynamicControlsPage.toggleCheckbox();
         Assertions.assertTrue(dynamicControlsPage.isCheckboxDisplayed(), "message");
-        Assertions.assertEquals(dynamicControlsPage.getMessageText(), "It's gone!", "Сообщение не совпадает!");
+        Assertions.assertEquals(dynamicControlsPage.getMessageText(), "It's gone!", "Checkbox is removed successfully.");
     }
 
     @Test
