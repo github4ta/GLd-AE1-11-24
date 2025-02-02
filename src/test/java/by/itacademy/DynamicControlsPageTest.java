@@ -1,9 +1,6 @@
 package by.itacademy;
 
 import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -50,7 +47,6 @@ public class DynamicControlsPageTest {
 
     @Test
     public void testHelloWorldOnPage1() {
-        // Переход на страницу dynamic_loading/1
         driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
         dynamicControlsPage.clickStartButton();
         Assertions.assertTrue(dynamicControlsPage.isHelloWorldDisplayed(), "Текст 'Hello World!' не отобразился!");
@@ -59,11 +55,7 @@ public class DynamicControlsPageTest {
     @Test
     public void testHelloWorldOnPage2() {
         driver.get("https://the-internet.herokuapp.com/dynamic_loading/2");
-
-
         dynamicControlsPage.clickStartButton();
-
-        // Проверяем, что текст "Hello World!" появился
         Assertions.assertTrue(dynamicControlsPage.isHelloWorldDisplayed(), "Текст 'Hello World!' не отобразился!");
     }
 
