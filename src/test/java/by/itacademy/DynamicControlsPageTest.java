@@ -47,6 +47,24 @@ public class DynamicControlsPageTest {
         Assertions.assertEquals(dynamicControlsPage.getMessageText(), "It's disabled!", "Сообщение не совпадает!");
     }
 
+    @Test
+    public void testHelloWorldOnPage1() {
+        // Переход на страницу dynamic_loading/1
+        driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
+        dynamicControlsPage.clickStartButton();
+        Assertions.assertTrue(dynamicControlsPage.isHelloWorldDisplayed(), "Текст 'Hello World!' не отобразился!");
+    }
+
+    @Test
+    public void testHelloWorldOnPage2() {
+        driver.get("https://the-internet.herokuapp.com/dynamic_loading/2");
+
+
+        dynamicControlsPage.clickStartButton();
+
+        // Проверяем, что текст "Hello World!" появился
+        Assertions.assertTrue(dynamicControlsPage.isHelloWorldDisplayed(), "Текст 'Hello World!' не отобразился!");
+    }
 
     @AfterClass
     public void afterClass() {
@@ -55,3 +73,4 @@ public class DynamicControlsPageTest {
         }
     }
 }
+
