@@ -10,15 +10,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-
-public class TestDynamicLoading {
+public class TestDynamicLoading2 {
     private WebDriver driver;
 
     @BeforeEach
     public void beforeEach() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
+        driver.get("https://the-internet.herokuapp.com/dynamic_loading/2");
     }
 
     @AfterEach
@@ -27,12 +26,12 @@ public class TestDynamicLoading {
     }
 
     @Test
-    @DisplayName("Нажимаем кнопку Start и проверяем на наличие теста Hello World!")
-    public void Test1() {
+    @DisplayName("Нажимаем кнопку Start и проверяем на наличие теста Hello World!(Вторая версия)")
+    public void Test2() {
         DynamicLoading dynamicLoading = new DynamicLoading(driver);
-        dynamicLoading.clickStart();
+        dynamicLoading.clickStart2();
         Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        WebElement text = wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.HELLO_WORLD));
+        WebElement text = wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.HELLO_WORLD2));
         String actual = text.getText();
         Assertions.assertEquals("Hello World!", actual);
     }
