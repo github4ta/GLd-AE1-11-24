@@ -19,7 +19,7 @@ public class DynamicControlsTest {
     public void testClick() {
         DynamicControlsPage dynamicControlsPage = new DynamicControlsPage(driver);
         dynamicControlsPage.clickRemove();
-        Waits.waitFor(4);
+
         Assertions.assertEquals("It's gone!",dynamicControlsPage.getMessage());
     }
 
@@ -28,9 +28,9 @@ public class DynamicControlsTest {
     public void testClick1() {
         DynamicControlsPage dynamicControlsPage = new DynamicControlsPage(driver);
         dynamicControlsPage.clickRemove();
-        Waits.waitFor(4);
+
         dynamicControlsPage.clickAdd();
-        Waits.waitFor(4);
+
         Assertions.assertEquals("It's back!",dynamicControlsPage.getItsBack());
 
     }
@@ -40,7 +40,7 @@ public class DynamicControlsTest {
     public void testClick2() {
         DynamicControlsPage dynamicControlsPage = new DynamicControlsPage(driver);
         dynamicControlsPage.clickEnable();
-        Waits.waitFor(4);
+
         Assertions.assertEquals("It's enabled!",dynamicControlsPage.getItsEnable());
 
     }
@@ -50,9 +50,9 @@ public class DynamicControlsTest {
     public void testClick3() {
         DynamicControlsPage dynamicControlsPage = new DynamicControlsPage(driver);
         dynamicControlsPage.clickEnable();
-        Waits.waitFor(4);
+
         dynamicControlsPage.clickDisable();
-        Waits.waitFor(4);
+
         Assertions.assertEquals("It's disabled!",dynamicControlsPage.getItsDisable());
 
     }
@@ -60,7 +60,7 @@ public class DynamicControlsTest {
 
     @AfterEach
     public void afterEach() {
-        Waits.waitFor(4);
+
         driver.quit();
     }
 }
