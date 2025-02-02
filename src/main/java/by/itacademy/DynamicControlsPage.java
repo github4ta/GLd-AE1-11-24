@@ -36,7 +36,7 @@ public class DynamicControlsPage {
     }
 
     public boolean isInputFieldEnabled() {
-        return wait.until(ExpectedConditions.elementToBeClickable(Locators.INPUT_FIELD)).isEnabled();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.INPUT_FIELD)).isEnabled();
     }
 
     public void clickStartButton() {
