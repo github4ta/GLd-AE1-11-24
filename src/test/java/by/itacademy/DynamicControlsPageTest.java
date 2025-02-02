@@ -1,19 +1,17 @@
 package by.itacademy;
 
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class DynamicControlsPageTest {
+class DynamicControlsPageTest {
     private WebDriver driver;
     private DynamicControlsPage dynamicControlsPage;
 
-    @Before
+    @BeforeEach
     public void before() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -66,7 +64,7 @@ public class DynamicControlsPageTest {
         Assertions.assertTrue(dynamicControlsPage.isHelloWorldDisplayed(), "Текст 'Hello World!' не отобразился!");
     }
 
-    @AfterClass
+    @AfterAll
     public void afterClass() {
         if (driver != null) {
             driver.quit();
