@@ -1,6 +1,7 @@
 package by.itacademy;
 
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -12,9 +13,8 @@ public class DynamicControlsPageTest {
     private WebDriver driver;
     private DynamicControlsPage dynamicControlsPage;
 
-    @BeforeClass();
-
-    public void beforeClass() {
+    @Before
+    public void before() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
@@ -36,6 +36,16 @@ public class DynamicControlsPageTest {
         Assertions.assertEquals(dynamicControlsPage.getMessageText(), "It's enabled!", "Сообщение не совпадает!");
     }
 
+    @Test
+    public void testInputFieldDisabled() {
+        driver.get("https://the-internet.herokuapp.com/dynamic_controls");
+        if (!dynamicControlsPage.isInputFieldEnabled()) {
+            dynamicControlsPage.toggleInputField();
+        }
+        dynamicControlsPage.toggleInputField();
+        Assertions.assertFalse(dynamicControlsPage.isInputFieldEnabled(), "Поле ввода не деактивировано!");
+        Assertions.assertEquals(dynamicControlsPage.getMessageText(), "It's disabled!", "Сообщение не совпадает!");
+    }
 
 
     @AfterClass
