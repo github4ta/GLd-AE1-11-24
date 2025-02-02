@@ -23,7 +23,7 @@ public class DynamicControlsPageTest {
     @Test
     public void testCheckboxRemoval() {
         dynamicControlsPage.toggleCheckbox();
-        Assertions.assertTrue(dynamicControlsPage.isCheckboxDisplayed(), "message");
+        Assertions.assertTrue(dynamicControlsPage.isInputFieldEnabled(), "Поле ввода не активно!");
         Assertions.assertEquals(dynamicControlsPage.getMessageText(), "It's gone!", "Checkbox is removed successfully.");
     }
 
@@ -31,8 +31,8 @@ public class DynamicControlsPageTest {
     public void testInputFieldEnabled() {
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
         dynamicControlsPage.toggleInputField();
-        Assertions.assertTrue(dynamicControlsPage.isInputFieldEnabled(), "Поле ввода не активно!");
-        Assertions.assertEquals(dynamicControlsPage.getMessageText(), "It's enabled!", "Сообщение не совпадает!");
+        Assertions.assertTrue(dynamicControlsPage.isInputFieldEnabled(), "message!");
+        Assertions.assertEquals(dynamicControlsPage.getMessageText(), "Checkbox is still displayed.", "Checkbox is removed successfully.");
     }
 
     @Test
