@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 public class AboutCompanyPage {
     private WebDriver driver;
 
+    public AboutCompanyPage(WebDriver driver) {
+    }
+
     public String getTitleAboutCompanyText() {
         By byXPath = By.xpath(AboutCompanyPageLocators.TITLE_ABOUT_COMPANY);
         WebElement webElement = driver.findElement(byXPath);
