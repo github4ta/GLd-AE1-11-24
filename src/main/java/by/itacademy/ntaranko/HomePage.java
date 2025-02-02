@@ -29,4 +29,12 @@ public class HomePage {
     public void clickCart() {
         driver.findElement(By.xpath(HomePageLocators.BUTTON_CART)).click();
     }
+
+    public String getHeadphoneSectionByFullText() {
+       return driver.findElement(By.linkText(HomePageLocators.LINK_TEXT_HEADPHONE)).getText();
+    }
+
+    public String getHeadphoneSectionByPartialText() {
+        return driver.findElement(By.partialLinkText(HomePageLocators.LINK_PARTIAL_TEXT_HEADPHONE)).getText();
+    }
 }
