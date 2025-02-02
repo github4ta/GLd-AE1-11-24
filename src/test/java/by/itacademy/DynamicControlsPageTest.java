@@ -1,6 +1,7 @@
 package by.itacademy;
 
 import org.junit.AfterClass;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -59,8 +60,8 @@ public class DynamicControlsPageTest {
         Assertions.assertTrue(dynamicControlsPage.isHelloWorldDisplayed(), "Текст 'Hello World!' не отобразился!");
     }
 
-    @AfterClass
-    public void afterClass() {
+    @AfterEach
+    public void afterEach() {
         if (driver != null) {
             driver.quit();
         }
