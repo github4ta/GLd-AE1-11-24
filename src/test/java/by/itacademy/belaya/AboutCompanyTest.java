@@ -1,7 +1,6 @@
 package by.itacademy.belaya;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -12,7 +11,15 @@ public class AboutCompanyTest {
     @BeforeEach
     public void beforeEach() {
         driver = new ChromeDriver();
-        driver.get("https://www.onliner.by/");
+        driver.get("https://blog.onliner.by/about");
+    }
+
+    @Test
+    @DisplayName("Заголовок страницы содержит Информация о компании")
+    public void testHeadingAboutCompany(){
+        HomePage homePage = new HomePage(driver);
+        AboutCompanyPage aboutCompanyPage = new AboutCompanyPage(driver);
+        Assertions.assertEquals("Информация о компании",aboutCompanyPage.getTitleAboutCompanyText());
     }
 
     @AfterEach
