@@ -1,13 +1,21 @@
 package by.itacademy.ntaranko;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HomePage {
     private WebDriver driver;
+    private WebDriverWait wait;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public void clickButtonLogin() {
@@ -23,7 +31,16 @@ public class HomePage {
     }
 
     public void clickFooterLinkAboutCompany() {
-        driver.findElement(By.xpath(HomePageLocators.FOOTER_LINK_ABOUT_COMPANY)).click();
+        By footerAboutCompanyLink = By.xpath(HomePageLocators.FOOTER_LINK_ABOUT_COMPANY);
+        WebElement aboutCompanyLink = driver.findElement(footerAboutCompanyLink);
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(footerAboutCompanyLink));
+            wait.until(ExpectedConditions.elementToBeClickable(footerAboutCompanyLink));
+            aboutCompanyLink.click();
+        } catch (StaleElementReferenceException e) {
+            driver.navigate().refresh();
+            driver.findElement(By.xpath(HomePageLocators.FOOTER_LINK_ABOUT_COMPANY)).click();
+        }
     }
 
     public void clickCart() {
@@ -31,7 +48,7 @@ public class HomePage {
     }
 
     public String getHeadphoneSectionByFullText() {
-       return driver.findElement(By.linkText(HomePageLocators.LINK_TEXT_HEADPHONE)).getText();
+        return driver.findElement(By.linkText(HomePageLocators.LINK_TEXT_HEADPHONE)).getText();
     }
 
     public String getHeadphoneSectionByPartialText() {
