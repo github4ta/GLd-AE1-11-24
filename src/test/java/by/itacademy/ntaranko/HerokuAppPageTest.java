@@ -2,13 +2,7 @@ package by.itacademy.ntaranko;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class HerokuAppPageTest {
     private WebDriver driver;
@@ -24,11 +18,23 @@ public class HerokuAppPageTest {
     @DisplayName("A checkbox can be removed")
     public void test1() {
         HerokuAppPage hp = new HerokuAppPage(driver);
-        hp.clickRemoveButton();
-        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(HerokuAppLocators.MESSAGE_It_S_GONE));
+        hp.clickRemoveAddButton();
+        hp.waitForVisibilityOfElement(HerokuAppLocators.MESSAGE_It_S_GONE_BACK);
 
         Assertions.assertFalse(hp.isElementPresent(HerokuAppLocators.CHECKBOX_A));
+    }
+
+    @Test
+    @DisplayName("A checkbox can be added")
+    public void test2() {
+        HerokuAppPage hp = new HerokuAppPage(driver);
+        hp.clickRemoveAddButton();
+        hp.waitForVisibilityOfElement(HerokuAppLocators.MESSAGE_It_S_GONE_BACK);
+
+        hp.clickRemoveAddButton();
+        hp.waitForVisibilityOfElement(HerokuAppLocators.MESSAGE_It_S_GONE_BACK);
+
+        Assertions.assertTrue(hp.isElementPresent(HerokuAppLocators.CHECKBOX_A));
     }
 
     @AfterEach
