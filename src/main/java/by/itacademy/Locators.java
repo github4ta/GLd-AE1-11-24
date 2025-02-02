@@ -9,7 +9,7 @@ public class Locators {
     public static By MESSAGE = By.id("message");
     public static By INPUT_FIELD = By.id("//button[text()=\'Remove\']");
     public static By TOGGLE_INPUT_BUTTON = By.xpath("//button[text()='Enable']");
-    public static By STARTBUTTON = By.xpath("//button[text()='Start']");
-    public static By HELLOWORLDTEXT = By.xpath("//h4[text()='Hello World!']");
+    public static By START_BUTTON = By.xpath("//button[text()='Start']");
+    public static By HELLO_WORLD_TEXT = By.xpath("//h4[text()='Hello World!']");
 }
 

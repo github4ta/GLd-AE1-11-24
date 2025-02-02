@@ -40,12 +40,12 @@ public class DynamicControlsPage {
     }
 
     public void clickStartButton() {
-        WebElement startButton = wait.until(ExpectedConditions.elementToBeClickable(Locators.STARTBUTTON));
+        WebElement startButton = wait.until(ExpectedConditions.elementToBeClickable(Locators.START_BUTTON));
         startButton.click();
     }
 
     public boolean isHelloWorldDisplayed() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.HELLOWORLDTEXT)).isDisplayed();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.HELLO_WORLD_TEXT)).isDisplayed();
     }
 }
 
