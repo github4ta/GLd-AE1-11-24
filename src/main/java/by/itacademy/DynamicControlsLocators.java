@@ -12,4 +12,6 @@ public class DynamicControlsLocators {
     public static final By IT_S_BACK = By.xpath("//p[@id=\"message\"]");
     public static final By IT_S_ENABLED = By.xpath("//p[@id=\"message\"]");
     public static final By IT_S_DISABLED = By.xpath("//p[@id=\"message\"]");
+    public static final By CHECKBOX_A = By.xpath("//input[@type=\"checkbox\"]");
+    public static final By INPUT_TEXT = By.xpath("//input[@type=\"text\"]");
 }
