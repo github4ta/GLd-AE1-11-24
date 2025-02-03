@@ -3,9 +3,6 @@ package by.itacademy.tsyhler;
 import org.openqa.selenium.By;
 
 public class DynamicControlsLocators {
-    final static By CHECKBOX = By.id("checkbox");
-    final static By INPUT_ENABLED = By.xpath("//input[not(@disabled)and @type='text']");
-    final static By INPUT_DISABLED = By.xpath("//input[@disabled and @type='text']");
     final static By INPUT_ENABLED_BUTTON = By.xpath("//button[text()='Enable']");
     final static By INPUT_DISABLED_BUTTON = By.xpath("//button[text()='Disable']");
     final static By ADD_CHECKBOX_BUTTON = By.xpath("//button[text()='Add']");

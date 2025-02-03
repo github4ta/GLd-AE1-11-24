@@ -15,24 +15,26 @@ public class DynamicControls {
         this.driver = driver;
     }
 
-    public String addCheckbox(){
+    public String addCheckbox() {
         driver.findElement(ADD_CHECKBOX_BUTTON).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(REMOVE_CHECKBOX_BUTTON)));
         return driver.findElement(SUCCESS_ADDING_CHECKBOX_MESSAGE).getText();
     }
-    public String removeCheckbox(){
+
+    public String removeCheckbox() {
         driver.findElement(REMOVE_CHECKBOX_BUTTON).click();
 //        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //        wait.until(ExpectedConditions.visibilityOf(driver.findElement(ADD_CHECKBOX_BUTTON)));
-        return driver.findElement( SUCCESS_REMOVING_CHECKBOX_MESSAGE).getText();
+        return driver.findElement(SUCCESS_REMOVING_CHECKBOX_MESSAGE).getText();
     }
-    public String disableInput(){
+
+    public String disableInput() {
         driver.findElement(INPUT_DISABLED_BUTTON).click();
         return driver.findElement(SUCCESS_DISABLE_INPUT).getText();
     }
 
-    public String enableInput(){
+    public String enableInput() {
         driver.findElement(INPUT_ENABLED_BUTTON).click();
         return driver.findElement(SUCCESS_ENABLE_INPUT).getText();
     }
