@@ -2,11 +2,15 @@ package by.onliner;
 
 import by.onliner.pages.CookiePage;
 import by.onliner.pages.HomePage;
+import by.onliner.pages.LoginPage;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.time.Duration;
 
 public class LoginTest {
     private WebDriver driver;
@@ -14,18 +18,21 @@ public class LoginTest {
     @BeforeEach
     public void beforeEach() {
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
         driver.get("https://www.onliner.by/");
         CookiePage cookiePage = new CookiePage(driver);
         cookiePage.clickCookie();
-        driver.manage().window().maximize();
+        HomePage homePage = new HomePage(driver);
+        homePage.clickButtonLogin();
     }
 
     @Test
     public void testLoginIsOpened() {
-        HomePage homePage = new HomePage(driver);
-        homePage.clickButtonLogin();
+        LoginPage loginPage = new LoginPage(driver);
+        String actual = loginPage.getTitleText();
 
-        String actual = "";
+        Assertions.assertEquals("Вход", actual);
     }
 
     @AfterEach
