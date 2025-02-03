@@ -3,6 +3,7 @@ package by.onliner;
 import by.onliner.pages.CookiePage;
 import by.onliner.pages.HomePage;
 import by.onliner.pages.LoginPage;
+import by.onliner.singleton.Singleton;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,23 +14,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class LoginTest {
-    private WebDriver driver;
 
     @BeforeEach
     public void beforeEach() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-        driver.get("https://www.onliner.by/");
-        CookiePage cookiePage = new CookiePage(driver);
+        HomePage homePage = new HomePage();
+        homePage.open();
+
+        CookiePage cookiePage = new CookiePage();
         cookiePage.clickCookie();
-        HomePage homePage = new HomePage(driver);
+
+        homePage = new HomePage();
         homePage.clickButtonLogin();
     }
 
     @Test
     public void testLoginIsOpened() {
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage();
         String actual = loginPage.getTitleText();
 
         Assertions.assertEquals("Вход", actual);
@@ -37,6 +37,6 @@ public class LoginTest {
 
     @AfterEach
     public void tearsDown() {
-        driver.quit();
+        Singleton.quit();
     }
 }

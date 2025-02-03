@@ -1,5 +1,6 @@
 package by.onliner.pages;
 
+import by.onliner.singleton.Singleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,8 +9,8 @@ public class CookiePage {
 
     private WebDriver driver;
 
-    public CookiePage(WebDriver driver) {
-        this.driver = driver;
+    public CookiePage() {
+        this.driver = Singleton.getDriver();
     }
 
     public void clickCookie(){
