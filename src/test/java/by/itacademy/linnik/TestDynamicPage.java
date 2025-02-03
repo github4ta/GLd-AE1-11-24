@@ -1,12 +1,9 @@
 package by.itacademy.linnik;
 
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.Wait;
-
 import java.time.Duration;
 
 public class TestDynamicPage {
@@ -57,7 +54,7 @@ public class TestDynamicPage {
     }
 
     @Test
-    @DisplayName("Проверяем отсутствие CheckBox")
+    @DisplayName("Проверяем отсутствие CheckBox, тест не должен пройти.")
     public void Test5() {
         DynamicPage dynamicPage = new DynamicPage(driver);
         dynamicPage.ckickRemove();
