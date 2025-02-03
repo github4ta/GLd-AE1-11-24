@@ -15,4 +15,6 @@ public class Locators {
     public static final By HELLO_WORLD = By.xpath("//h4[text()=\"Hello World!\"]");
     public static final By BUTTON_START2 = By.xpath("//button[text()=\"Start\"]");
     public static final By HELLO_WORLD2 = By.xpath("//h4[text()=\"Hello World!\"]");
+    public static final By CHECK_BOX = By.xpath("//input[@type=\"checkbox\"]");
+    public static final By INPUT_TEXT = By.xpath("//input[@type=\"text\"]");
 }

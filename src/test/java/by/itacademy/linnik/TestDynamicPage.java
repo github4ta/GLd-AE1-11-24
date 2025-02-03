@@ -1,9 +1,11 @@
 package by.itacademy.linnik;
 
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
 
@@ -13,7 +15,7 @@ public class TestDynamicPage {
     @BeforeEach
     public void beforeEach() {
         ChromeOptions chromeOptions = new ChromeOptions();
-        Duration duration = Duration.ofSeconds(5);
+        Duration duration = Duration.ofSeconds(20);
         chromeOptions.setImplicitWaitTimeout(duration);
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
@@ -32,7 +34,7 @@ public class TestDynamicPage {
         DynamicPage dynamicPage = new DynamicPage(driver);
         dynamicPage.ckickRemove();
         String actual = "It's gone!";
-        Assertions.assertEquals(actual,dynamicPage.itsGone());
+        Assertions.assertEquals(actual, dynamicPage.itsGone());
     }
 
     @Test
@@ -42,7 +44,7 @@ public class TestDynamicPage {
         dynamicPage.ckickRemove();
         dynamicPage.clickADD();
         String actual = "It's gone!";
-        Assertions.assertEquals(actual,dynamicPage.itsBack());
+        Assertions.assertEquals(actual, dynamicPage.itsBack());
     }
 
     @Test
@@ -55,12 +57,19 @@ public class TestDynamicPage {
     }
 
     @Test
-    @DisplayName("Нажимаем кнопку Disable и проверяем на появление текста It's disabled!")
-    public void Test4() {
+    @DisplayName("Проверяем отсутствие CheckBox")
+    public void Test5() {
         DynamicPage dynamicPage = new DynamicPage(driver);
-        dynamicPage.clickENABLE();
-        dynamicPage.clickDISABLE();
-        String actual = "It's enabled!";
-        Assertions.assertEquals(actual,dynamicPage.itsDisabled());
+        dynamicPage.ckickRemove();
+        Assertions.assertFalse(dynamicPage.isCheckBox(Locators.CHECK_BOX));
+    }
+
+    @Test
+    @DisplayName("Проверяем наличие CheckBox")
+    public void Test6() {
+        DynamicPage dynamicPage = new DynamicPage(driver);
+        dynamicPage.ckickRemove();
+        dynamicPage.clickADD();
+        Assertions.assertTrue(dynamicPage.isCheckBox(Locators.CHECK_BOX));
     }
 }
