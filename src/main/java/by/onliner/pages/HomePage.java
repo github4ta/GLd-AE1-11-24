@@ -1,5 +1,6 @@
 package by.onliner.pages;
 
+import by.onliner.singleton.Singleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,10 +9,12 @@ public class HomePage {
     private final By BUTTON_LOGIN_LOCATOR = By.xpath("//div[@class='auth-bar__item auth-bar__item--text']");
     private final By TEXT_COPYRIGHT_LOCATOR = By.xpath("//div[@class='footer-style__copy']");
 
+    private final String URL = "https://www.onliner.by/";
+
     private WebDriver driver;
 
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
+    public HomePage() {
+        this.driver = Singleton.getDriver();
     }
 
     public String getTextCopyright() {
@@ -26,4 +29,7 @@ public class HomePage {
         driver.findElement(INPUT_SEARCH_LOCATOR).sendKeys(q);
     }
 
+    public void open() {
+        driver.get(URL);
+    }
 }
