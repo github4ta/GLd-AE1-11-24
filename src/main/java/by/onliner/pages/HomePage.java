@@ -45,4 +45,8 @@ public class HomePage {
     public String getSearchText() {
         return driver.findElement(SEARCH_TEXT_LOCATOR).getText();
     }
+
+    public void clickNewsLink() {
+        driver.findElement(NEWS_LINK_LOCATOR).click();
+    }
 }
