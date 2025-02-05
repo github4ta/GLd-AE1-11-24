@@ -33,4 +33,8 @@ public class HomePage {
             By.xpath("//a[@href='https://b2breg.onliner.by/advertising']");
     private final By PLANS_LINK_LOCATOR =
             By.xpath("//a[@href='https://docs.google.com/spreadsheets/d/1SGFaTkV_Ru4vI29ml9yvR-dMz9rOl7DVVpKk64w5lqM/preview']");
+
+    public String getCopyrightText() {
+        return driver.findElement(COPYRIGHT_TEXT_LOCATOR).getText();
+    }
 }
