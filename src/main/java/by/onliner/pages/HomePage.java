@@ -57,4 +57,8 @@ public class HomePage {
     public void clickHousesAndFlatsLink() {
         driver.findElement(HOUSES_AND_FLATS_LINK_LOCATOR).click();
     }
+
+    public void clickBaraholkaLink() {
+        driver.findElement(BARAHOLKA_LINK_LOCATOR).click();
+    }
 }
