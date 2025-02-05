@@ -13,7 +13,7 @@ public class Catalog {
         this.driver = Singleton.getDriver();
     }
 
-    public String getCatalogTitle() {
+    public String getCatalogTitleText() {
         return driver.findElement(CATALOG_TITLE).getText();
     }
 }
