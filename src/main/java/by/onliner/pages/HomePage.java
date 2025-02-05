@@ -41,4 +41,8 @@ public class HomePage {
     public String getEnterText() {
         return driver.findElement(ENTER_TEXT_LOCATOR).getText();
     }
+
+    public String getSearchText() {
+        return driver.findElement(SEARCH_TEXT_LOCATOR).getText();
+    }
 }
