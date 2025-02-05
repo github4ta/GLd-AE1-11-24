@@ -11,7 +11,7 @@ public class ForumPage {
     private WebDriver driver;
 
     public ForumPage(WebDriver driver) {
-        this.driver = Singleton.getDriver();
+        this.driver = driver;
     }
 
     public void clickForum() {
