@@ -10,8 +10,8 @@ public class ForumPage {
 
     private WebDriver driver;
 
-    public ForumPage(WebDriver driver) {
-        this.driver = driver;
+    public ForumPage() {
+        this.driver = Singleton.getDriver();
     }
 
     public void clickForum() {
@@ -20,5 +20,9 @@ public class ForumPage {
 
     public String getTextForum(){
         return driver.findElement(TEXT_FORUM).getText();
+    }
+
+    public void open(){
+        driver.get("https://www.onliner.by/");
     }
 }
