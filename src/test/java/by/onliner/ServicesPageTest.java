@@ -11,7 +11,10 @@ public class ServicesPageTest {
 
     @Test
     public void testGetTitleOfServicesPage() {
-        String actual = new MainPage(driver).openDriver().clickServiceSectionButton().getTitleOfServicesPage();
+        String actual =
+                new MainPage(driver).
+                openDriver().clickServiceSectionButton().
+                getTitleOfServicesPage();
         Assertions.assertEquals("Заказы", actual);
         Singleton.quit();
     }
