@@ -11,21 +11,21 @@ public class CalculatorPage {
         this.driver = driver;
     }
 
-    public void clickGenderM(){
+    public void clickGenderM() {
         WebElement webElement = driver.findElement(CalculatorPageLocators.GENDER);
         Actions actions = new Actions(driver);
         actions.moveToElement(webElement, 50, 0).click().perform();
     }
 
-    public void clickGenderF(){
-        WebElement webElement = driver.findElement(CalculatorPageLocators.GENDER);
-        Actions actions =new Actions(driver);
-        actions.moveToElement(webElement,90,0).click().perform();
-    }
-
-    public void clickCalculate(){
+    public void clickGenderF() {
         WebElement webElement = driver.findElement(CalculatorPageLocators.GENDER);
         Actions actions = new Actions(driver);
-        actions.moveToElement(webElement,90,30).click().perform();
+        actions.moveToElement(webElement, 90, 0).click().perform();
+    }
+
+    public void clickCalculate() {
+        WebElement webElement = driver.findElement(CalculatorPageLocators.GENDER);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(webElement, 90, 30).click().perform();
     }
 }
