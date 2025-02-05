@@ -15,8 +15,14 @@ public class Singleton {
     public static WebDriver getDriver() {
         if (driver == null) {
             driver = new ChromeDriver();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-            driver.manage().window().maximize();
+
+            WebDriver.Options options = driver.manage();
+            WebDriver.Timeouts timeouts = options.timeouts();
+            timeouts.implicitlyWait(Duration.ofSeconds(10));
+            driver
+                    .manage()
+                    .window()
+                    .maximize();
         }
         return driver;
     }
