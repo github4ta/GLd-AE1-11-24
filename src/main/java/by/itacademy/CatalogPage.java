@@ -10,9 +10,7 @@ public class CatalogPage {
         this.driver = driver;
     }
 
-  public void clickMenuLinkCatalog() throws InterruptedException {
-  //      Thread.sleep(5000);
-    //    driver.findElement(By.xpath(HomePageLocators.MENU_LINK_CATALOG)).click();
+    public void clickMenuLinkCatalog() throws InterruptedException {
     }
 
     public void clickMenuLinkApple() throws InterruptedException {
