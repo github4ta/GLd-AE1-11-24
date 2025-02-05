@@ -37,4 +37,8 @@ public class HomePage {
     public String getCopyrightText() {
         return driver.findElement(COPYRIGHT_TEXT_LOCATOR).getText();
     }
+
+    public String getEnterText() {
+        return driver.findElement(ENTER_TEXT_LOCATOR).getText();
+    }
 }
