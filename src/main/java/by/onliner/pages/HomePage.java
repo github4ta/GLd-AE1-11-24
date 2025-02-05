@@ -61,4 +61,8 @@ public class HomePage {
     public void clickBaraholkaLink() {
         driver.findElement(BARAHOLKA_LINK_LOCATOR).click();
     }
+
+    public void clickForumLink() {
+        driver.findElement(FORUM_LINK_LOCATOR).click();
+    }
 }
