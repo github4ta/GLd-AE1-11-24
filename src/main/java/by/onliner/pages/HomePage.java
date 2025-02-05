@@ -65,4 +65,8 @@ public class HomePage {
     public void clickForumLink() {
         driver.findElement(FORUM_LINK_LOCATOR).click();
     }
+
+    public void clickVacanciesLink() {
+        driver.findElement(VACANCIES_LINK_LOCATOR).click();
+    }
 }
