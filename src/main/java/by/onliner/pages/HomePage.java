@@ -49,4 +49,8 @@ public class HomePage {
     public void clickNewsLink() {
         driver.findElement(NEWS_LINK_LOCATOR).click();
     }
+
+    public void clickAvtobaraholkaLink() {
+        driver.findElement(AVTOBARAHOLKA_LINK_LOCATOR).click();
+    }
 }
