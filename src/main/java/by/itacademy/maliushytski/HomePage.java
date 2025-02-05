@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage {
     private final static String HOME_PAGE = "//h1[.='Welcome to the-internet']";
-    WebDriver driver;
+    private WebDriver driver;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
