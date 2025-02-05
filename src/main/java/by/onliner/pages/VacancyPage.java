@@ -13,4 +13,8 @@ public class VacancyPage {
     }
 
     private final By TITLE_TEXT_LOCATOR = By.xpath("//h1[text()='Вакансии']");
+
+    public String getTitleText(){
+        return driver.findElement(TITLE_TEXT_LOCATOR).getText();
+    }
 }
