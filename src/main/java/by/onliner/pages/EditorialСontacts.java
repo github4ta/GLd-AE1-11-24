@@ -13,7 +13,7 @@ public class EditorialСontacts {
         this.driver = Singleton.getDriver();
     }
 
-    public String getHeadingText(){
+    public String getHeadingText() {
         return driver.findElement(HEADING_TEXT).getText();
     }
 }
