@@ -12,4 +12,7 @@ public class ForumPage {
         this.driver = Singleton.getDriver();
     }
 
+    public String getTextForum() {
+        return driver.findElement(CLICK_TITLE_FORUM).getText();
+    }
 }
