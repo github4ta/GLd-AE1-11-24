@@ -12,11 +12,4 @@ public class ForumPage {
         this.driver = Singleton.getDriver();
     }
 
-    public void clickForum() {
-        driver.findElement(CLICK_TITLE_FORUM).click();
-    }
-
-    public void open() {
-        driver.get("https://www.onliner.by/");
-    }
 }
