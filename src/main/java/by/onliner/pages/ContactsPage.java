@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class ContactsPage {
-    private final By HEADER_TEXT = By.xpath("//h1[text()='Контакты редакции. Манифест. Спецпроекты. Правила использования материалов']");
+    private final By HEADER_TEXT = By.xpath("//div[@Class='news-header__title']/child::h1");
 
     private WebDriver driver;
 
