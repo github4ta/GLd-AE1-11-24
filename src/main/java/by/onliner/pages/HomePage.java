@@ -83,6 +83,4 @@ public class HomePage {
     public void clickManifestButton() {
         driver.findElement(MANIFEST_BUTTON).click();
     }
-
-
 }
