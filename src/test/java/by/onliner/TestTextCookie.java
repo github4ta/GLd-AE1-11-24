@@ -1,4 +1,4 @@
-package by.onliner;//
+package by.onliner;
 
 import by.onliner.pages.SettingCookie;
 import by.onliner.singleton.Singleton;
@@ -17,7 +17,7 @@ public class TestTextCookie {
     }
 
     @AfterEach
-    public void afterEach(){
+    public void afterEach() {
         Singleton.quit();
     }
 }
