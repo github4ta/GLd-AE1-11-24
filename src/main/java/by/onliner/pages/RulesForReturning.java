@@ -7,9 +7,13 @@ import org.openqa.selenium.WebDriver;
 public class RulesForReturning {
     private WebDriver driver;
 
-    private final By HEADER_RULES=By.xpath("//div[@class='news-header__title']//h1");
+    private final By HEADER_RULES = By.xpath("//div[@class='news-header__title']//h1");
 
     public RulesForReturning(WebDriver driver) {
         this.driver = Singleton.getDriver();
+    }
+
+    public String getHeaderText(){
+        return driver.findElement(HEADER_RULES).getText();
     }
 }
