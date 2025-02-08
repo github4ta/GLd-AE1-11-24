@@ -16,5 +16,8 @@ public class Аdvertising {
         this.driver = Singleton.getDriver();
     }
 
+    public String getAdvText(){
+        return driver.findElement(DIV_ADV_LOCATOR).getText();
+    }
 
 }
