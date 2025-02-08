@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 
 public class SettingCookie {
 
-    public static String URL = "https://www.onliner.by/";
     public static By TEXT_TITLE = By.xpath("//div[text()='Мы используем cookie, чтобы сделать сайт удобнее']");
 
     private WebDriver driver;
@@ -17,9 +16,5 @@ public class SettingCookie {
 
     public String getTextCookieTitle() {
         return driver.findElement(TEXT_TITLE).getText();
-    }
-
-    public void open() {
-        driver.get(URL);
     }
 }
