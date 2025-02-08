@@ -34,6 +34,8 @@ public class HomePage {
     private final By PLANS_LINK_LOCATOR =
             By.xpath("//a[@href='https://docs.google.com/spreadsheets/d/1SGFaTkV_Ru4vI29ml9yvR-dMz9rOl7DVVpKk64w5lqM/preview']");
 
+    private By MANIFEST_BUTTON = By.xpath("//a[@href='https://blog.onliner.by/manifest']");
+
     public String getCopyrightText() {
         return driver.findElement(COPYRIGHT_TEXT_LOCATOR).getText();
     }
@@ -77,4 +79,10 @@ public class HomePage {
     public void clickPlansLink() {
         driver.findElement(PLANS_LINK_LOCATOR).click();
     }
+
+    public void clickManifestButton() {
+        driver.findElement(MANIFEST_BUTTON).click();
+    }
+
+
 }
