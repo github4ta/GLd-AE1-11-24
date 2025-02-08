@@ -1,6 +1,7 @@
 package by.itacademy.tsyhler;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,14 +19,12 @@ public class DynamicControls {
     public String addCheckbox() {
         driver.findElement(ADD_CHECKBOX_BUTTON).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(REMOVE_CHECKBOX_BUTTON)));
-        return driver.findElement(SUCCESS_ADDING_CHECKBOX_MESSAGE).getText();
+        WebElement helloWorldPhrase = wait.until(ExpectedConditions.visibilityOf(driver.findElement(SUCCESS_ADDING_CHECKBOX_MESSAGE)));
+        return helloWorldPhrase.getText();
     }
 
     public String removeCheckbox() {
         driver.findElement(REMOVE_CHECKBOX_BUTTON).click();
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.visibilityOf(driver.findElement(ADD_CHECKBOX_BUTTON)));
         return driver.findElement(SUCCESS_REMOVING_CHECKBOX_MESSAGE).getText();
     }
 
