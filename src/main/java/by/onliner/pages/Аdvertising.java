@@ -6,11 +6,9 @@ import org.openqa.selenium.WebDriver;
 
 public class Аdvertising {
     private WebDriver driver;
-
     private static final By DIV_ADV_LOCATOR = By.xpath(
             "//div[@class='title-style title-style_primary-alter" +
                     " title-style_giant-other b2breg-advertising__title']");
-    private static final String URL = "https://b2breg.onliner.by/advertising";
 
     public Аdvertising(WebDriver driver) {
         this.driver = Singleton.getDriver();
@@ -18,10 +16,5 @@ public class Аdvertising {
 
     public String getAdvText() {
         return driver.findElement(DIV_ADV_LOCATOR).getText();
-    }
-
-    public Аdvertising open(){
-        driver.get(URL);
-        return this;
     }
 }
