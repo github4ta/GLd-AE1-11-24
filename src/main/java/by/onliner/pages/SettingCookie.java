@@ -1,4 +1,4 @@
-package by.onliner.pages;//
+package by.onliner.pages;
 
 import by.onliner.singleton.Singleton;
 import org.openqa.selenium.By;
@@ -15,11 +15,11 @@ public class SettingCookie {
         this.driver = Singleton.getDriver();
     }
 
-    public String getTextCookieTitle(){
+    public String getTextCookieTitle() {
         return driver.findElement(TEXT_TITLE).getText();
     }
 
-    public void open(){
+    public void open() {
         driver.get(URL);
     }
 }
