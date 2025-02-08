@@ -1,5 +1,12 @@
 package by.onliner.pages;
 
-public class RulesForReturning {
+import by.onliner.singleton.Singleton;
+import org.openqa.selenium.WebDriver;
 
+public class RulesForReturning {
+    private WebDriver driver;
+
+    public RulesForReturning(WebDriver driver) {
+        this.driver = Singleton.getDriver();
+    }
 }
