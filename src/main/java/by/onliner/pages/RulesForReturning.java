@@ -9,7 +9,7 @@ public class RulesForReturning {
     private final By HEADER_RULES = By.xpath("//div[@class='news-header__title']//h1");
     private final String URL = "https://blog.onliner.by/pravila-vozvrata-tovarov-i-deneg";
 
-    public RulesForReturning(WebDriver driver) {
+    public RulesForReturning() {
         this.driver = Singleton.getDriver();
     }
 
