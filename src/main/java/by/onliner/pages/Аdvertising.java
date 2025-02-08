@@ -1,4 +1,5 @@
 package by.onliner.pages;
 
-public class SomePage {
+public class Аdvertising {
+
 }
