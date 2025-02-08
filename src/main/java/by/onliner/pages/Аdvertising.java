@@ -16,8 +16,12 @@ public class Аdvertising {
         this.driver = Singleton.getDriver();
     }
 
-    public String getAdvText(){
+    public String getAdvText() {
         return driver.findElement(DIV_ADV_LOCATOR).getText();
     }
 
+    public Аdvertising open(){
+        driver.get(URL);
+        return this;
+    }
 }
