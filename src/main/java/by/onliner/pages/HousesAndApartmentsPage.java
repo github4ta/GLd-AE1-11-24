@@ -9,8 +9,6 @@ public class HousesAndApartmentsPage {
             ("//span[contains(@class, 'project-navigation__sign') and contains(text(), 'Продажа')]");
     public static final By SPAN_RENT = By.xpath
             ("//span[contains(@class, 'project-navigation__sign') and contains(text(), 'Аренда')]");
-    private static final String URL = "https://r.onliner.by/pk/";
-
     private WebDriver driver;
 
     public HousesAndApartmentsPage() {
@@ -23,10 +21,5 @@ public class HousesAndApartmentsPage {
 
     public String getRentText() {
         return driver.findElement(SPAN_RENT).getText();
-    }
-
-    public HousesAndApartmentsPage open() {
-        driver.get(URL);
-        return this;
     }
 }
