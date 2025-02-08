@@ -1,4 +1,4 @@
-package by.onliner;
+package by.onliner;//
 
 import by.onliner.pages.SettingCookie;
 import by.onliner.singleton.Singleton;
