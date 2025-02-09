@@ -5,13 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
-
     private WebDriver driver;
 
     public HomePage() {
         this.driver = Singleton.getDriver();
     }
 
+    private final By LINK_VACANCY = By.xpath("//a[@href='https://blog.onliner.by/vacancy']");
     private final By COPYRIGHT_TEXT_LOCATOR = By.xpath("//div[@class='footer-style__copy']");
     private final By ENTER_TEXT_LOCATOR = By.xpath("//div[@class='auth-bar__item auth-bar__item--text']");
     private final By SEARCH_TEXT_LOCATOR = By.xpath("//input[@name='query']");
@@ -82,5 +82,9 @@ public class HomePage {
 
     public void clickManifestButton() {
         driver.findElement(MANIFEST_BUTTON).click();
+    }
+
+    public void clickLinkVacancy() {
+        driver.findElement(LINK_VACANCY).click();
     }
 }
