@@ -4,13 +4,12 @@ import by.onliner.singleton.Singleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Adv {
+public class AdvPage {
     private static final By ADV_LOCATOR = By.xpath(
-            "//div[@class='title-style title-style_primary-alter" +
-                    " title-style_giant-other b2breg-advertising__title']");
+            "/html/body/div[1]/div[2]/div/div/div/div[1]/div[1]");
     private WebDriver driver;
 
-    public void Аdv() {
+    public AdvPage() {
         this.driver = Singleton.getDriver();
     }
 
