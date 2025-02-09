@@ -3,7 +3,6 @@ package by.onliner.pages;
 import by.onliner.singleton.Singleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import java.time.Duration;
 
 public class PageObject {
