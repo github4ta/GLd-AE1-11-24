@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AdvPage {
     private static final By ADV_LOCATOR = By.xpath(
-            "/html/body/div[1]/div[2]/div/div/div/div[1]/div[1]");
+            "//div[text()='Реклама на сайте Onlíner']");
     private WebDriver driver;
 
     public AdvPage() {
