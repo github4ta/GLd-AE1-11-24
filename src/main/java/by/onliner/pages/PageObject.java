@@ -19,11 +19,9 @@ public class PageObject {
     }
 
     public String getSupportRequestPage() {
-        return driver.findElement(SUPPORT_REQUEST_PAGE).getText();
-    }
-
-    public String getPageHeaderText() {
-        return driver.findElement(HEADER_PAGE).getText();
+        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(SUPPORT_REQUEST_PAGE));
+        return element.getText();
     }
 }
 
