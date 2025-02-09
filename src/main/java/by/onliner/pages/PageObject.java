@@ -13,6 +13,7 @@ public class PageObject {
     private final WebDriver driver;
     private final By HEADER_PAGE = By.xpath("//h1[text()='Публичные договоры']");
 
+
     public PageObject() {
         this.driver = Singleton.getDriver();
     }
