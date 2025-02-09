@@ -8,7 +8,7 @@ public class HomePage {
     private WebDriver driver;
     private final By SITE_RULES_LINK = By.xpath("//a[@href='https://blog.onliner.by/siterules']");
 
-    public HomePage(WebDriver driver) {
+    public HomePage() {
         this.driver = Singleton.getDriver();
     }
 
