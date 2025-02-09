@@ -12,7 +12,6 @@ public class ServicesPage {
         this.driver = Singleton.getDriver();
     }
 
-
     public String getTitleOfServicesPage() {
         return driver.findElement(ORDERS_TITLE).getText();
     }
