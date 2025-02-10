@@ -29,7 +29,7 @@ public class HomePage {
 
     public void clickSiteRulesLink() {
         driver.findElement(SITE_RULES_LINK).click();
-
+    }
     private final By LINK_VACANCY = By.xpath("//a[@href='https://blog.onliner.by/vacancy']");
     private final By COPYRIGHT_TEXT_LOCATOR = By.xpath("//div[@class='footer-style__copy']");
     private final By ENTER_TEXT_LOCATOR = By.xpath("//div[@class='auth-bar__item auth-bar__item--text']");
