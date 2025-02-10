@@ -8,7 +8,7 @@ public class ServicesPage {
     private WebDriver driver;
     private final By ORDERS_TITLE = By.xpath("//div[@class='service-header__title service-header__title_huge']");
 
-    public ServicesPage(WebDriver driver) {
+    public ServicesPage() {
         this.driver = Singleton.getDriver();
     }
 

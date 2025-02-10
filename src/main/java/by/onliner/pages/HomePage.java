@@ -16,7 +16,7 @@ public class HomePage {
 
     public ServicesPage clickServiceSectionButton() {
         driver.findElement(SERVICE_SECTION_BUTTON).click();
-        return new ServicesPage(driver);
+        return new ServicesPage();
     }
 
     public HomePage() {
