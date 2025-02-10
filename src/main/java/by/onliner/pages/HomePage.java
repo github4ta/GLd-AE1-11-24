@@ -35,6 +35,7 @@ public class HomePage {
             By.xpath("//a[@href='https://docs.google.com/spreadsheets/d/1SGFaTkV_Ru4vI29ml9yvR-dMz9rOl7DVVpKk64w5lqM/preview']");
     private By MANIFEST_BUTTON =
             By.xpath("//a[@href='https://blog.onliner.by/manifest']");
+    private final By ADV_LINK_LOCATOR =By.xpath("//a[@href='https://b2breg.onliner.by/advertising'] ");
 
     public String getCopyrightText() {
         return driver.findElement(COPYRIGHT_TEXT_LOCATOR).getText();
