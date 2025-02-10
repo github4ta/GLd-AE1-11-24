@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage {
     private WebDriver driver;
+
+    private final By SITE_RULES_LINK = By.xpath("//a[@href='https://blog.onliner.by/siterules']");
+
     private final String URL = "https://www.onliner.by/";
     private final By SERVICE_SECTION_BUTTON = By.xpath("//a [@href='https://s.onliner.by/tasks' and @class='b-main-navigation__link']");
 
@@ -22,6 +25,10 @@ public class HomePage {
     public HomePage() {
         this.driver = Singleton.getDriver();
     }
+
+
+    public void clickSiteRulesLink() {
+        driver.findElement(SITE_RULES_LINK).click();
 
     private final By LINK_VACANCY = By.xpath("//a[@href='https://blog.onliner.by/vacancy']");
     private final By COPYRIGHT_TEXT_LOCATOR = By.xpath("//div[@class='footer-style__copy']");
