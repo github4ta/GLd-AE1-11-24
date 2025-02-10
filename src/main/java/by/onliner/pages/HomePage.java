@@ -46,6 +46,8 @@ public class HomePage {
             By.xpath("//a[@href='https://docs.google.com/spreadsheets/d/1SGFaTkV_Ru4vI29ml9yvR-dMz9rOl7DVVpKk64w5lqM/preview']");
     private By MANIFEST_BUTTON =
             By.xpath("//a[@href='https://blog.onliner.by/manifest']");
+    private final By AUTO_FLEA_MARKET_TITLE =
+            By.xpath("//span[@class='b-main-navigation__text' and text()='Автобарахолка']");
 
     public String getCopyrightText() {
         return driver.findElement(COPYRIGHT_TEXT_LOCATOR).getText();
@@ -97,5 +99,9 @@ public class HomePage {
 
     public void clickLinkVacancy() {
         driver.findElement(LINK_VACANCY).click();
+    }
+
+    public void getTexstAutoFealMarket(){
+        driver.findElement(AUTO_FLEA_MARKET_TITLE).getText();
     }
 }
