@@ -88,4 +88,8 @@ public class HomePage {
     public void clickLinkVacancy() {
         driver.findElement(LINK_VACANCY).click();
     }
+
+    public void clickLinkAdv(){
+        driver.findElement(ADV_LINK_LOCATOR).click();
+    }
 }
