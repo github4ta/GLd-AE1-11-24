@@ -17,6 +17,7 @@ public class HomePage {
     public ServicesPage clickServiceSectionButton() {
         driver.findElement(SERVICE_SECTION_BUTTON).click();
         return new ServicesPage(driver);
+    }
 
     public HomePage() {
         this.driver = Singleton.getDriver();
@@ -101,7 +102,7 @@ public class HomePage {
         driver.findElement(LINK_VACANCY).click();
     }
 
-    public void getTexstAutoFealMarket(){
+    public void getTexstAutoFealMarket() {
         driver.findElement(AUTO_FLEA_MARKET_TITLE).getText();
     }
 }
