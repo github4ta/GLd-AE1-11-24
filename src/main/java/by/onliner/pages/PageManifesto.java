@@ -1,4 +1,4 @@
-package by.onliner.pages.linnik;
+package by.onliner.pages;
 
 import by.onliner.singleton.Singleton;
 import org.openqa.selenium.By;
