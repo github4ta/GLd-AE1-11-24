@@ -113,7 +113,7 @@ public class HomePage {
     }
 
     public ContactsPage clickEditorialContactsLink() {
-        driver.findElement(EDITORIAL_CONTACTS);
+        driver.findElement(EDITORIAL_CONTACTS).click();
         return new ContactsPage();
     }
 }
