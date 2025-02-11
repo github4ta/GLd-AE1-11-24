@@ -8,28 +8,8 @@ public class HomePage {
     private WebDriver driver;
 
     private final By SITE_RULES_LINK = By.xpath("//a[@href='https://blog.onliner.by/siterules']");
-
     private final String URL = "https://www.onliner.by/";
     private final By SERVICE_SECTION_BUTTON = By.xpath("//a [@href='https://s.onliner.by/tasks' and @class='b-main-navigation__link']");
-
-    public HomePage openPage() {
-        driver.get(URL);
-        return this;
-    }
-
-    public ServicesPage clickServiceSectionButton() {
-        driver.findElement(SERVICE_SECTION_BUTTON).click();
-        return new ServicesPage();
-    }
-
-    public HomePage() {
-        this.driver = Singleton.getDriver();
-    }
-
-
-    public void clickSiteRulesLink() {
-        driver.findElement(SITE_RULES_LINK).click();
-    }
     private final By LINK_VACANCY = By.xpath("//a[@href='https://blog.onliner.by/vacancy']");
     private final By COPYRIGHT_TEXT_LOCATOR = By.xpath("//div[@class='footer-style__copy']");
     private final By ENTER_TEXT_LOCATOR = By.xpath("//div[@class='auth-bar__item auth-bar__item--text']");
@@ -56,6 +36,25 @@ public class HomePage {
             By.xpath("//a[@href='https://blog.onliner.by/manifest']");
     private final By AUTO_FLEA_MARKET_TITLE =
             By.xpath("//span[@class='b-main-navigation__text' and text()='Автобарахолка']");
+    private final By EDITORIAL_CONTACTS = By.xpath("//a[normalize-space(text()) = 'Контакты редакции']");
+
+    public HomePage() {
+        this.driver = Singleton.getDriver();
+    }
+
+    public HomePage openPage() {
+        driver.get(URL);
+        return this;
+    }
+
+    public void clickSiteRulesLink() {
+        driver.findElement(SITE_RULES_LINK).click();
+    }
+
+    public ServicesPage clickServiceSectionButton() {
+        driver.findElement(SERVICE_SECTION_BUTTON).click();
+        return new ServicesPage();
+    }
 
     public String getCopyrightText() {
         return driver.findElement(COPYRIGHT_TEXT_LOCATOR).getText();
@@ -111,5 +110,10 @@ public class HomePage {
 
     public void getTexstAutoFealMarket() {
         driver.findElement(AUTO_FLEA_MARKET_TITLE).getText();
+    }
+
+    public ContactsPage clickEditorialContactsLink() {
+        driver.findElement(EDITORIAL_CONTACTS);
+        return new ContactsPage();
     }
 }
